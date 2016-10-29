@@ -13,6 +13,9 @@ class BootStrap {
 
     	new UserRole(user: user, role: userRole).save(flush: true)
     	new UserRole(user: admin, role: adminRole).save(flush: true)
+
+        UserRole.create (admin)
+        admin.save(flush:true)
     }
 
     def destroy = {
