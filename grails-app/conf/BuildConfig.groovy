@@ -22,6 +22,7 @@ grails.project.fork = [
 ]
 
 grails.project.dependency.resolver = "ivy" // or ivy
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -38,6 +39,7 @@ grails.project.dependency.resolution = {
         grailsPlugins()
         grailsHome()
         mavenLocal()
+
         grailsCentral()
         mavenCentral()
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
@@ -49,6 +51,7 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
          runtime 'mysql:mysql-connector-java:5.1.24'
+        // runtime "com.oracle.ojdbc7:12.1.0.2.0" 
     }
 
     plugins {
@@ -69,7 +72,5 @@ grails.project.dependency.resolution = {
         //runtime ":cached-resources:1.1"
         //runtime ":yui-minify-resources:0.1.5"
         compile ":spring-security-core:2.0.0"
-
-        grails.server.port.http = 8081
     }
 }
