@@ -23,29 +23,40 @@
 			</g:if>
 			<ol class="property-list event">
 			
-				<g:if test="${eventInstance?.duration}">
+				<g:if test="${eventInstance?.livestream}">
 				<li class="fieldcontain">
-					<span id="duration-label" class="property-label"><g:message code="event.duration.label" default="Duration" /></span>
+					<span id="livestream-label" class="property-label"><g:message code="event.livestream.label" default="Livestream" /></span>
 					
-						<span class="property-value" aria-labelledby="duration-label"><g:fieldValue bean="${eventInstance}" field="duration"/></span>
+						<span class="property-value" aria-labelledby="livestream-label"><g:formatBoolean boolean="${eventInstance?.livestream}" /></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${eventInstance?.description}">
+				<g:if test="${eventInstance?.eventTime}">
 				<li class="fieldcontain">
-					<span id="description-label" class="property-label"><g:message code="event.description.label" default="Description" /></span>
+					<span id="eventTime-label" class="property-label"><g:message code="event.eventTime.label" default="Event Time" /></span>
 					
-						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${eventInstance}" field="description"/></span>
+						<span class="property-value" aria-labelledby="eventTime-label"><g:formatDate date="${eventInstance?.eventTime}" /></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${eventInstance?.start}">
+				<g:if test="${eventInstance?.price}">
 				<li class="fieldcontain">
-					<span id="start-label" class="property-label"><g:message code="event.start.label" default="Start" /></span>
+					<span id="price-label" class="property-label"><g:message code="event.price.label" default="Price" /></span>
 					
-						<span class="property-value" aria-labelledby="start-label"><g:formatDate date="${eventInstance?.start}" /></span>
+						<span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${eventInstance}" field="price"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${eventInstance?.artists}">
+				<li class="fieldcontain">
+					<span id="artists-label" class="property-label"><g:message code="event.artists.label" default="Artists" /></span>
+					
+						<g:each in="${eventInstance.artists}" var="a">
+						<span class="property-value" aria-labelledby="artists-label"><g:link controller="artist" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

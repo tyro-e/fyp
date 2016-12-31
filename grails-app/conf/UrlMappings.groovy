@@ -10,9 +10,16 @@ class UrlMappings {
 
         "/"(controller:"main")
 
+        "/artist"(controller:"artist")
+        "/venue"(controller:"venue")
+        "/event"(controller:"event")
+        "/user"(controller:"user")
+
         "500"(view:'/error')
 
         "/login/$action?"(controller: "login")
 		"/logout/$action?"(controller: "logout")
+
+
 	}
 }

@@ -2,27 +2,35 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'duration', 'error')} required">
-	<label for="duration">
-		<g:message code="event.duration.label" default="Duration" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'livestream', 'error')} ">
+	<label for="livestream">
+		<g:message code="event.livestream.label" default="Livestream" />
+		
 	</label>
-	<g:field name="duration" type="number" min="0" value="${eventInstance.duration}" required=""/>
+	<g:checkBox name="livestream" value="${eventInstance?.livestream}" />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'description', 'error')} required">
-	<label for="description">
-		<g:message code="event.description.label" default="Description" />
+<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'eventTime', 'error')} required">
+	<label for="eventTime">
+		<g:message code="event.eventTime.label" default="Event Time" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="description" required="" value="${eventInstance?.description}"/>
+	<g:datePicker name="eventTime" precision="day"  value="${eventInstance?.eventTime}"  />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'start', 'error')} required">
-	<label for="start">
-		<g:message code="event.start.label" default="Start" />
+<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'price', 'error')} required">
+	<label for="price">
+		<g:message code="event.price.label" default="Price" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="start" precision="day"  value="${eventInstance?.start}"  />
+	<g:field name="price" value="${fieldValue(bean: eventInstance, field: 'price')}" required=""/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'artists', 'error')} ">
+	<label for="artists">
+		<g:message code="event.artists.label" default="Artists" />
+		
+	</label>
+	<g:select name="artists" from="${fyp.Artist.list()}" multiple="multiple" optionKey="id" size="5" value="${eventInstance?.artists*.id}" class="many-to-many"/>
 </div>
 

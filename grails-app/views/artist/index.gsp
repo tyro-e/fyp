@@ -24,11 +24,27 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="artistName" title="${message(code: 'artist.artistName.label', default: 'Artist Name')}" />
+					
+						<g:sortableColumn property="artistGenre" title="${message(code: 'artist.artistGenre.label', default: 'Artist Genre')}" />
+					
+						<g:sortableColumn property="artistDescription" title="${message(code: 'artist.artistDescription.label', default: 'Artist Description')}" />
+					
+						<g:sortableColumn property="artistNationality" title="${message(code: 'artist.artistNationality.label', default: 'Artist Nationality')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${artistInstanceList}" status="i" var="artistInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${artistInstance.id}">${fieldValue(bean: artistInstance, field: "artistName")}</g:link></td>
+					
+						<td>${fieldValue(bean: artistInstance, field: "artistGenre")}</td>
+					
+						<td>${fieldValue(bean: artistInstance, field: "artistDescription")}</td>
+					
+						<td>${fieldValue(bean: artistInstance, field: "artistNationality")}</td>
 					
 					</tr>
 				</g:each>

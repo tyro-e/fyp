@@ -136,3 +136,20 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/logout/**':       ['permitAll']
 ]
 
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'fyp.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'fyp.UserRole'
+grails.plugin.springsecurity.authority.className = 'fyp.Role'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                ['permitAll'],
+	'/index':           ['permitAll'],
+	'/index.gsp':       ['permitAll'],
+	'/assets/**':       ['permitAll'],
+	'/**/js/**':        ['permitAll'],
+	'/**/css/**':       ['permitAll'],
+	'/**/images/**':    ['permitAll'],
+	'/**/favicon.ico':  ['permitAll']
+]
+

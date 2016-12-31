@@ -25,7 +25,8 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form url="[resource:userInstance, action:'save']" >
+
+			<g:form controller="user" action="registration" >
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>
@@ -33,6 +34,11 @@
 					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
 			</g:form>
+
 		</div>
 	</body>
 </html>
+
+
+
+

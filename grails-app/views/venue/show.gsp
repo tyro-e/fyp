@@ -23,6 +23,62 @@
 			</g:if>
 			<ol class="property-list venue">
 			
+				<g:if test="${venueInstance?.venueName}">
+				<li class="fieldcontain">
+					<span id="venueName-label" class="property-label"><g:message code="venue.venueName.label" default="Venue Name" /></span>
+					
+						<span class="property-value" aria-labelledby="venueName-label"><g:fieldValue bean="${venueInstance}" field="venueName"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${venueInstance?.venueDescription}">
+				<li class="fieldcontain">
+					<span id="venueDescription-label" class="property-label"><g:message code="venue.venueDescription.label" default="Venue Description" /></span>
+					
+						<span class="property-value" aria-labelledby="venueDescription-label"><g:fieldValue bean="${venueInstance}" field="venueDescription"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${venueInstance?.venueAddress}">
+				<li class="fieldcontain">
+					<span id="venueAddress-label" class="property-label"><g:message code="venue.venueAddress.label" default="Venue Address" /></span>
+					
+						<span class="property-value" aria-labelledby="venueAddress-label"><g:fieldValue bean="${venueInstance}" field="venueAddress"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${venueInstance?.alcoholServed}">
+				<li class="fieldcontain">
+					<span id="alcoholServed-label" class="property-label"><g:message code="venue.alcoholServed.label" default="Alcohol Served" /></span>
+					
+						<span class="property-value" aria-labelledby="alcoholServed-label"><g:formatBoolean boolean="${venueInstance?.alcoholServed}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${venueInstance?.capacity}">
+				<li class="fieldcontain">
+					<span id="capacity-label" class="property-label"><g:message code="venue.capacity.label" default="Capacity" /></span>
+					
+						<span class="property-value" aria-labelledby="capacity-label"><g:fieldValue bean="${venueInstance}" field="capacity"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${venueInstance?.events}">
+				<li class="fieldcontain">
+					<span id="events-label" class="property-label"><g:message code="venue.events.label" default="Events" /></span>
+					
+						<g:each in="${venueInstance.events}" var="e">
+						<span class="property-value" aria-labelledby="events-label"><g:link controller="event" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:venueInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

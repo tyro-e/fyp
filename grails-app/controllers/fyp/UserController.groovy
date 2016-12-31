@@ -6,6 +6,7 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class UserController {
 
+    static scaffold = true
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -99,5 +100,19 @@ class UserController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+
+    @Transactional
+    def registration() {
+        def user = new User(params).save()
+
+        if(user.hasErrors()) {
+            flash.userInstance = user
+            redirect action: 'register'
+        } else {
+            session.user = user 
+            redirect uri: '/' 
+        } 
     }
 }

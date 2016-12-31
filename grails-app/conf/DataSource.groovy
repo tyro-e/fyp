@@ -1,8 +1,8 @@
 dataSource {
     pooled = true
     driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
+    username = "root"
+    password = "root"
 }
 
 hibernate {
@@ -36,10 +36,10 @@ environments {
         testOnReturn=true
         validationQuery="SELECT 1"
       }
-        }
+    }
   }
-    production {
-        dataSource {      
+  production {
+    dataSource {      
       dbCreate = "update"
       driverClassName = "com.mysql.jdbc.Driver"
       url = System.getProperty("JDBC_CONNECTION_STRING") + "?useUnicode=true&characterEncoding=UTF8&autoReconnect=true&zeroDateTimeBehavior=convertToNull"
@@ -55,8 +55,8 @@ environments {
         testOnReturn=true
         validationQuery="SELECT 1"
       }
-        }
     }
+  }
   test {
     dataSource {
       dbCreate = "create-drop"

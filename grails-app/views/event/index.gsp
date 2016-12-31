@@ -24,11 +24,11 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="duration" title="${message(code: 'event.duration.label', default: 'Duration')}" />
+						<g:sortableColumn property="livestream" title="${message(code: 'event.livestream.label', default: 'Livestream')}" />
 					
-						<g:sortableColumn property="description" title="${message(code: 'event.description.label', default: 'Description')}" />
+						<g:sortableColumn property="eventTime" title="${message(code: 'event.eventTime.label', default: 'Event Time')}" />
 					
-						<g:sortableColumn property="start" title="${message(code: 'event.start.label', default: 'Start')}" />
+						<g:sortableColumn property="price" title="${message(code: 'event.price.label', default: 'Price')}" />
 					
 					</tr>
 				</thead>
@@ -36,11 +36,11 @@
 				<g:each in="${eventInstanceList}" status="i" var="eventInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${eventInstance.id}">${fieldValue(bean: eventInstance, field: "duration")}</g:link></td>
+						<td><g:link action="show" id="${eventInstance.id}">${fieldValue(bean: eventInstance, field: "livestream")}</g:link></td>
 					
-						<td>${fieldValue(bean: eventInstance, field: "description")}</td>
+						<td><g:formatDate date="${eventInstance.eventTime}" /></td>
 					
-						<td><g:formatDate date="${eventInstance.start}" /></td>
+						<td>${fieldValue(bean: eventInstance, field: "price")}</td>
 					
 					</tr>
 				</g:each>
