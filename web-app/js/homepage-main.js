@@ -22,18 +22,6 @@ $(document).ready(function()
 
 
 
-
-$(document).ready(function(){
-	$('#calendarModalBtn').click(function()
-	{
-		$('.fc-today-button').click();
-	});
-});
-
-
-
-
-
 $(document).ready(function(){
     $(".form_datetime").datetimepicker({
         format: "dd MM yyyy - hh:ii",

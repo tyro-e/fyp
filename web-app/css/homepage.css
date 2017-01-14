@@ -81,3 +81,10 @@
 	max-width: 900px;
 	margin: 0 auto;
 }
+
+#calendarModalBtn{
+	height: 53px;
+    position: fixed;
+    top: 77px;
+    left: 40px;
+}

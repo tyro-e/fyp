@@ -56,9 +56,10 @@
           </div>
 
 
-          <button type = "button" id="calendarModalBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#calendarModal">Calendar</button>
 
-
+          <a href="#calendarModal" role="button" data-toggle="modal">
+            <img id="calendarModalBtn" src="${resource(dir:'images/homepage', file: 'calendarIconWhite.png')}">
+          </a>
 
         </div>
 
