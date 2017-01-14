@@ -26,7 +26,7 @@
               <div class = "col-md-6" style="float: none;margin: 0 auto;">
                 <div style="text-align: center;margin-top: 10px;">
                   <div class = "col-md-4"><button class = "mainpage-main-buttons" id = "main-buttons-event">EVENT</button></div>
-                  <div class = "col-md-4" ><button class = "mainpage-main-buttons" id = "main-buttons-artist">ARTIST</button></div>
+                  <div class = "col-md-4"><button class = "mainpage-main-buttons" id = "main-buttons-artist">ARTIST</button></div>
                   <div class = "col-md-4"><button class = "mainpage-main-buttons" id = "main-buttons-venue">VENUE</button></div>
                 </div>
               </div>
@@ -56,17 +56,17 @@
           </div>
 
 
-          <button id="myBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">modal</button>
+          <button type = "button" id="calendarModalBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#calendarModal">Calendar</button>
 
 
 
-          </div>
+        </div>
 
 
 
-              <sec:ifNotLoggedIn>
-                <div class = "register-text" style="text-align: center;">New to the site? <u style="cursor: pointer;color: rgba(255,255,255,0.4);">Register</u></div>
-              </sec:ifNotLoggedIn>
+            <sec:ifNotLoggedIn>
+              <div class = "register-text" style="text-align: center;">New to the site? <u style="cursor: pointer;color: rgba(255,255,255,0.4);">Register</u></div>
+            </sec:ifNotLoggedIn>
 
 
 
@@ -82,14 +82,12 @@
 
 
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <div id='calendar'></div>
-
-        </div>
+<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div id='calendar'></div>
     </div>
+  </div>
 </div>
 
 
@@ -97,10 +95,10 @@
 
 
 
-<script src="${resource(dir:'js', file:'homepage.js')}" type="text/javascript"></script>
+
 <script src="${resource(dir:'js/plugins', file:'bootstrap-datetimepicker.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js/plugins', file:'moment.min.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js/plugins', file:'fullcalendar.js')}" type="text/javascript"></script>
-
+<script src="${resource(dir:'js', file:'homepage-main.js')}" type="text/javascript"></script>
 </body>
 </html>

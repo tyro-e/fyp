@@ -10869,6 +10869,16 @@ function Calendar_constructor(element, overrides) {
 		renderView();
 	}
 
+	$(document).ready(function(){
+		$('#calendarModalBtn').click(function()
+		{
+			setTimeout(function () 
+			{
+				today();
+			}, 200);
+		});
+	});
+
 
 	function gotoDate(zonedDateInput) {
 		date = t.moment(zonedDateInput).stripZone();
