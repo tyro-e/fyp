@@ -11,6 +11,7 @@ $(document).ready(function()
 	$('#main-buttons-artist').click(function()
 	{
 		$('.main-search-artist').toggleClass('search-options-display');
+		console.log("rev");
 	});
 
 	$('#main-buttons-venue').click(function()
@@ -21,17 +22,25 @@ $(document).ready(function()
 
 
 
-
+// Date picker
 $(document).ready(function(){
     $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii",
+
+        viewMode: "days",
+        format: "dd/MM/yyyy",
         autoclose: true,
-        todayBtn: true,
-        startDate: "2013-02-14 10:00",
-        minuteStep: 10
+        todayBtn: true
     });
 });
 
+
+// Calendar Modal
+$(document).ready(function () {
+    $("#myBtn").click(function(){
+    	
+        $('#myModal').modal('show');
+    });
+});
 
 $(document).ready(function() {
 	$('#calendar').fullCalendar({

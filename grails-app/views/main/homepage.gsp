@@ -37,10 +37,21 @@
             <div class = "col-md-6" style="float: none;margin: 0 auto;margin-top: 10px;overflow: hidden;">
               <div class = "col-md-4 mainpage-event-search main-date-picker" style="float: left;text-align: center;">
 
-              <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
-                  <input size="16" type="text" value="" readonly>
-                  <span class="add-on"><i class="icon-calendar"></i></span>
-              </div>
+                <div class="input-append date datetimepicker1">
+                  <input type="text" class="form-control" />
+                  <span class="add-on">
+                    <i class="icon-calendar"></i>
+                  </span>
+                </div>
+
+                <div class='input-append date datetimepicker2'>
+                  <input type='text' class="form-control" />
+                  <span class="add-on">
+                    <i class="icon-calendar"></i>
+                  </span>
+                </div>
+
+
 
               </div>
 
@@ -100,6 +111,6 @@
 <script src="${resource(dir:'js/plugins', file:'bootstrap-datetimepicker.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js/plugins', file:'moment.min.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js/plugins', file:'fullcalendar.js')}" type="text/javascript"></script>
-<script src="${resource(dir:'js', file:'homepage-main.js')}" type="text/javascript"></script>
+<script src="${resource(dir:'js', file:'homepage.js')}" type="text/javascript"></script>
 </body>
 </html>
