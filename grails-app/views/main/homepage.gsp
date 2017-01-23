@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>SUBSURFACE</title>
-    <link rel="stylesheet" href="${resource(dir:'css',file:'homepage.css')}" />
+    <link rel="stylesheet" href="${resource(dir:'css',file:'homepage-main.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'bootstrap-datetimepicker.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.print.css')}" media='print' />
@@ -13,7 +13,7 @@
   <div class="content">
     <br>
       <div class="intro-body">
-        <div class="container">
+        <div class="container homepage-top">
           <div class="row">
 
             <div class = "col-md-12">
@@ -79,27 +79,38 @@
 
 
 
-            <sec:ifNotLoggedIn>
-              <div class = "register-text" style="text-align: center;">New to the site? <u style="cursor: pointer;color: rgba(255,255,255,0.4);">Register</u></div>
-            </sec:ifNotLoggedIn>
+        <sec:ifNotLoggedIn>
+          <div class = "register-text" style="text-align: center;">New to the site? <u style="cursor: pointer;color: rgba(255,255,255,0.4);">Register</u></div>
+        </sec:ifNotLoggedIn>
 
-
-
-
-
-
-            </div>
+          
+        <!-- Begin page content -->
+        <div class="section2" style="padding-bottom: 1000px;background-color: white;">
+          <div class = "eventListings">
+            <div class = "eventSectionTitle">EVENTS</div>
           </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
         </div>
       </div>
-
-  </div>  
+    </div>
+  </div>
+</div>  
 
 
 
 <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" style="padding: 12px">
       <div id='calendar'></div>
     </div>
   </div>

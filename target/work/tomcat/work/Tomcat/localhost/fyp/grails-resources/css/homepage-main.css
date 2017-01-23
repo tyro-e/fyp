@@ -10,11 +10,8 @@
 	letter-spacing: 2px;
 }
 
-.homepage-search{
-	width: 650px;
-	height: 35px;
-	border-radius: 4px;
-	outline: none;
+.homepage-top{
+	height: 100vh;
 }
 
 .intro-text{
@@ -87,4 +84,9 @@
     position: fixed;
     top: 77px;
     left: 40px;
+}
+
+.eventSectionTitle{
+	color: black;
+	font-size: 50px;
 }
