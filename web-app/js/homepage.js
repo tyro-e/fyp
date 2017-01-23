@@ -23,26 +23,28 @@ $(document).ready(function()
 
 
 // Date picker
-$(document).ready(function(){
-    $(".datetimepicker1").datetimepicker({
-        format: "dd/MM",
+$(function () {
+    $('#datetimepicker1').datetimepicker({
+        format: "dd/M",
         autoclose: true,
-        todayBtn: true
+        todayBtn: true,
+        viewMode: 'days',
+        minView: 2
     });
-
-    $('.datetimepicker2').datetimepicker({
+    $('#datetimepicker2').datetimepicker({
         useCurrent: false, //Important! See issue #1075
-        format: "dd/MM",
+        format: "dd/M",
         autoclose: true,
-        todayBtn: true
+        todayBtn: true,
+        viewMode: 'days',
+        minView: 2
     });
 
-    $(".datetimepicker1").on("dp.change", function (e) {
-        $('.datetimepicker2').data("DateTimePicker").minDate(e.date);
+    $("#datetimepicker1").on("dp.change", function (e) {
+        $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
     });
-
-    $(".datetimepicker2").on("dp.change", function (e) {
-        $('.datetimepicker1').data("DateTimePicker").maxDate(e.date);
+    $("#datetimepicker2").on("dp.change", function (e) {
+        $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
     });
 });
 

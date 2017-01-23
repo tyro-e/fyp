@@ -36,23 +36,26 @@
 
             <div class = "col-md-6" style="float: none;margin: 0 auto;margin-top: 10px;overflow: hidden;">
               <div class = "col-md-4 mainpage-event-search main-date-picker" style="float: left;text-align: center;">
+                
+                <div class="container">
+                  <div class="form-group">
+                      <div class='input-group date' id='datetimepicker1'>
+                          <input type='text' class="form-control" />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                  </div>
 
-                <div class="input-append date datetimepicker1">
-                  <input type="text" class="form-control" />
-                  <span class="add-on">
-                    <i class="icon-calendar"></i>
-                  </span>
+                  <div class="form-group">
+                      <div class='input-group date' id='datetimepicker2'>
+                          <input type='text' class="form-control" />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                  </div>
                 </div>
-
-                <div class='input-append date datetimepicker2'>
-                  <input type='text' class="form-control" />
-                  <span class="add-on">
-                    <i class="icon-calendar"></i>
-                  </span>
-                </div>
-
-
-
               </div>
 
               <div class="col-md-4 mainpage-event-search main-search-artist" style="text-align: center;">
