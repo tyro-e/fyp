@@ -14,6 +14,7 @@ class UrlMappings {
         "/venue"(controller:"venue")
         "/event"(controller:"event")
         "/user"(controller:"user")
+        "/livestream"(controller:"livestream")
 
         "500"(view:'/error')
 

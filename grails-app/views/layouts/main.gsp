@@ -31,7 +31,7 @@
           <li><g:link controller = "event">UPCOMING</g:link></li> 
           <li><g:link controller = "artist">ARTISTS</g:link></li>
           <li><g:link controller = "venue">VENUES</g:link></li> 
-
+          <li><g:link controller = "livestream">LIVESTREAM</g:link></li> 
 
           <li style="float: right;">
             <sec:ifNotLoggedIn>
