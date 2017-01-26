@@ -1,39 +1,4 @@
-<%@ page import="fyp.Livestream" %>
-<!--
-<meta name="layout" content="main">
--->
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta name="layout" content="main">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-</head>
-
-<body>
-    <article>
-
-        <section class="experiment">
-            <div class="make-center">
-                <input type="text" id="room-id" value="abcdef">
-                <button id="open-room">Open Room</button>
-                <button id="join-room">Join Room</button>
-                <button id="open-or-join-room">Auto Open Or Join Room</button>
-
-                <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
-            </div>
-
-            <div id="videos-container"></div>
-        </section>
-
-        
-        <script src="${resource(dir:'js/livestream', file:'RTCMultiConnection.js')}" type="text/javascript"></script>
-        <script src="${resource(dir:'js/livestream', file:'socket.io.js')}" type="text/javascript"></script>
-
-        <script>
-            // ......................................................
+// ......................................................
             // .......................UI Code........................
             // ......................................................
             document.getElementById('open-room').onclick = function() {
@@ -69,7 +34,7 @@
             // by default, socket.io server is assumed to be deployed on your own URL
             connection.socketURL = '/';
             // comment-out below line if you do not have your own socket.io server
-            connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
+            //connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
             connection.socketMessageEvent = 'video-broadcast-demo';
             connection.session = {
                 audio: true,
@@ -148,17 +113,3 @@
                 })();
                 disableInputButtons();
             }
-        </script>
-
-
-
-        
-
-        <script src="https://cdn.webrtc-experiment.com/commits.js" async></script>
-
-    </article>
-
-
-</body>
-
-</html>
