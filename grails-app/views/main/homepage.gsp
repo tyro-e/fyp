@@ -14,7 +14,7 @@
     <br>
       <div class="intro-body">
         <div class="container homepage-top">
-          <div class="row">
+          <div class="row" style="margin-bottom: 15px;">
 
             <div class = "col-md-12">
               <div class="brand-heading" style="color: white;">SUBSURFACE</div>
@@ -23,9 +23,9 @@
           </div>
 
           <div class="row">
-              <div class = "col-md-6" style="float: none;margin: 0 auto;">
+              <div class = "col-md-9" style="float: none;margin: 0 auto;">
                 <div style="text-align: center;margin-top: 10px;">
-                  <div class = "col-md-4"><button class = "mainpage-main-buttons" id = "main-buttons-event">EVENT</button></div>
+                  <div class = "col-md-4"><button class = "mainpage-main-buttons" id = "main-buttons-date">DATE</button></div>
                   <div class = "col-md-4"><button class = "mainpage-main-buttons" id = "main-buttons-artist">ARTIST</button></div>
                   <div class = "col-md-4"><button class = "mainpage-main-buttons" id = "main-buttons-venue">VENUE</button></div>
                 </div>
@@ -34,28 +34,27 @@
 
           <div class="row">
 
-            <div class = "col-md-6" style="float: none;margin: 0 auto;margin-top: 10px;overflow: hidden;">
+            <div class = "col-md-9" style="float: none;margin: 0 auto;margin-top: 10px;overflow: hidden;">
               <div class = "col-md-4 mainpage-event-search main-date-picker" style="float: left;text-align: center;">
                 
-                <div class="container">
-                  <div class="form-group">
-                      <div class='input-group date' id='datetimepicker1'>
-                          <input type='text' class="form-control" />
-                          <span class="input-group-addon">
-                              <span class="glyphicon glyphicon-calendar"></span>
-                          </span>
-                      </div>
-                  </div>
+                <div class="form-group" style="display: inline-flex;">
+                    <div class='input-group date' id='datetimepicker1' style="width: 48%;">
+                        <input type='text' class="form-control" style="padding: 6px 7px;height: 40px;" />
+                        <span class="input-group-addon" style="height: 40px;">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
 
-                  <div class="form-group">
-                      <div class='input-group date' id='datetimepicker2'>
-                          <input type='text' class="form-control" />
-                          <span class="input-group-addon">
-                              <span class="glyphicon glyphicon-calendar"></span>
-                          </span>
-                      </div>
-                  </div>
+                    <div style="width: 4%"></div>
+
+                    <div class='input-group date' id='datetimepicker2' style="width: 48%;">
+                        <input type='text' class="form-control" style="padding: 6px 7px;height: 40px;" />
+                        <span class="input-group-addon" style="height: 40px">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
                 </div>
+
               </div>
 
               <div class="col-md-4 mainpage-event-search main-search-artist" style="text-align: center;">

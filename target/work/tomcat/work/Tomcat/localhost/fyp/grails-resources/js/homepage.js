@@ -8,10 +8,14 @@ $(document).ready(function()
 
 $(document).ready(function()
 {
+	$('#main-buttons-date').click(function()
+	{
+		$('.main-date-picker').toggleClass('search-options-display');
+	});
+
 	$('#main-buttons-artist').click(function()
 	{
 		$('.main-search-artist').toggleClass('search-options-display');
-		console.log("rev");
 	});
 
 	$('#main-buttons-venue').click(function()
@@ -25,17 +29,18 @@ $(document).ready(function()
 // Date picker
 $(function () {
     $('#datetimepicker1').datetimepicker({
+        useCurrent: false,
         format: "dd/M",
         autoclose: true,
-        todayBtn: true,
+        todayBtn: false,
         viewMode: 'days',
         minView: 2
     });
     $('#datetimepicker2').datetimepicker({
-        useCurrent: false, //Important! See issue #1075
+
         format: "dd/M",
         autoclose: true,
-        todayBtn: true,
+        todayBtn: false,
         viewMode: 'days',
         minView: 2
     });
