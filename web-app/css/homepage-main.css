@@ -10,7 +10,7 @@
 	letter-spacing: 2px;
 }
 
-.homepage-top{
+.homepage-section1{
 	height: 100vh;
 }
 
@@ -90,4 +90,16 @@
 .eventSectionTitle{
 	color: black;
 	font-size: 50px;
+}
+
+.homepage-section2{
+	padding-bottom: 1000px;
+	background-color: white;
+}
+
+
+.ordinal {
+  font-size: 9px;
+  position: relative;
+  top: 0.5em;
 }

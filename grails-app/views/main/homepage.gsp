@@ -13,9 +13,13 @@
   <div class="content">
     <br>
       <div class="intro-body">
-        <div class="container homepage-top">
-          <div class="row" style="margin-bottom: 15px;">
+        <div class="container homepage-section1">
 
+          <a href="#calendarModal" role="button" data-toggle="modal">
+            <img id="calendarModalBtn" src="${resource(dir:'images/homepage', file: 'calendarIconWhite.png')}">
+          </a>
+
+          <div class="row" style="margin-bottom: 15px;">
             <div class = "col-md-12">
               <div class="brand-heading" style="color: white;">SUBSURFACE</div>
               <p class="intro-text">ELECTRONIC MUSIC EVENTS <span style="color: red"> // </span> DUBLIN</p>
@@ -65,18 +69,9 @@
                 <g:textField class = "venue-search" placeholder="Search venue.." name="query" value="${params.query}"/>
               </div>
             </div>
-
           </div>
 
-
-
-          <a href="#calendarModal" role="button" data-toggle="modal">
-            <img id="calendarModalBtn" src="${resource(dir:'images/homepage', file: 'calendarIconWhite.png')}">
-          </a>
-
         </div>
-
-
 
         <sec:ifNotLoggedIn>
           <div class = "register-text" style="text-align: center;">New to the site? <u style="cursor: pointer;color: rgba(255,255,255,0.4);">Register</u></div>
@@ -84,12 +79,38 @@
 
           
         <!-- Begin page content -->
-        <div class="section2" style="padding-bottom: 1000px;background-color: white;">
-          <div class = "eventListings">
-            <div class = "eventSectionTitle">EVENTS</div>
+        <div class="homepage-section2">
+          <div class = "eventSectionTitle">EVENTS</div>
+
+          <div class = "container row" style="width: 100%;">
+            <div class="col-md-6" style="float: none;margin:0 auto;">
+
+              <div class = "event-date" style="display: inline-flex;font-size: 24px;">
+                FRIDAY <div style="color: red">  //  </div> JANUARY 13<span class="ordinal">TH</span> 2017
+              </div>
+
+              <div class = "event-item" style="height: 150px;border: 1px solid black;">
+                <div class = "artist-name">
+                  EXAMPLE ARTIST
+                </div>
+
+                <div class = "venue-name">
+                  at Olympia Theatre
+                </div>
+
+                <div class = "attend-button" style="float: right;">
+                  ATTEND
+                </div>
+
+              </div>
+
+            </div>
+
+
           </div>
 
         </div>
+
 
 
 
