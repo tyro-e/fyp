@@ -83,13 +83,16 @@
 #calendarModalBtn{
 	height: 53px;
     position: fixed;
-    top: 77px;
-    left: 40px;
+    top: 61px;
+    left: -206px;
+    fill: white;
 }
 
 .eventSectionTitle{
+	position: relative;
 	color: black;
 	font-size: 50px;
+	top: -53px;
 }
 
 .homepage-section2{

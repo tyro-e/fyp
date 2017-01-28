@@ -16,7 +16,7 @@
         <div class="container homepage-section1">
 
           <a href="#calendarModal" role="button" data-toggle="modal">
-            <img id="calendarModalBtn" src="${resource(dir:'images/homepage', file: 'calendarIconWhite.png')}">
+            <img class = "svg" id="calendarModalBtn" src="${resource(dir:'images/homepage', file: 'calendarIconSVG.svg')}">
           </a>
 
           <div class="row" style="margin-bottom: 15px;">
