@@ -1,22 +1,25 @@
-//= require jquery
-//= require_tree .
-//= require_self
-
 'use strict';
-var app = angular.module('Angular-API', []);
+var app = angular.module('Angular-API', ['ngRoute']);
 
 
-app.config(['$routeProvider', '$locationProvider',
-    function($routeProvider, $locationProvider) {
-      console.log("page load");
-        //$locationProvider.html5Mode(true);
-        $routeProvider
+app.run(function($rootScope, $location, SecurityService) {
+    $rootScope.goto = function (hash) {
+        $location.path(hash);
 
-            .when('/event', {
-                templateUrl: 'assets/index.html'
-            })
+    }
+})
+
+app.config(['$routeProvider', function($routeProvider) {
+    //$locationProvider.html5Mode(true);
+    $routeProvider
+      .when('/artist', {
+          templateUrl: 'assets/index.html'
+      })
+
  }]);
   
+
+
 app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
   // sets the search scope if undefined - (on page load)

@@ -14,6 +14,8 @@ class EventController {
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Event.list(params), model:[eventInstanceCount: Event.count()]
+
+        //render file: 'grails-app/assets/index.html', contentType: 'text/html'
     }
 
     def show(Event eventInstance) {
