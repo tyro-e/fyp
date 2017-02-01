@@ -5,5 +5,6 @@ modules = {
         resource url:'javascripts/app.js'
         resource url:'javascripts/nav_menu.js'
     }
+    
 
 }
