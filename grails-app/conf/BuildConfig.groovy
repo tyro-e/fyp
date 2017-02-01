@@ -54,7 +54,7 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         runtime 'mysql:mysql-connector-java:5.1.24'
-        runtime "org.grails.plugins:angularjs-resources:1.4.2"
+        //runtime "org.grails.plugins:angularjs-resources:1.4.2"
 
         // runtime "com.oracle.ojdbc7:12.1.0.2.0" 
         // compile 'com.oracle:ojdbc6:11.2.0.4.0'
@@ -72,6 +72,7 @@ grails.project.dependency.resolution = {
         compile ":spring-security-core:2.0.0"
 
         compile "org.grails.plugins:asset-pipeline:2.7.4"
+        compile ":angular-template-asset-pipeline:2.3.0"
 
 
         // plugins needed at runtime but not for compilation

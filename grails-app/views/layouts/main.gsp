@@ -1,24 +1,26 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>
     <g:layoutTitle default="SUBSURFACE" />
   </title>
-  
+
+  <!-- STYLESHEETS -->
   <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+  <!-- JAVASCRIPTS -->
   <script src="${resource(dir:'js/plugins/jQuery', file:'jQuery-v3.1.1.js')}" type="text/javascript"></script>
   <script src="${resource(dir:'js/plugins/bootstrap', file:'bootstrap.js')}" type="text/javascript"></script>
- 
- 
-  <!--
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  -->
 
+  
+  <script src="${resource(dir:'js/plugins/angular', file:'angular.min.js')}" type="text/javascript"></script>
+  <script src="${resource(dir:'js/plugins/angular', file:'angular-cookies.min.js')}" type="text/javascript"></script>
+  <script src="${resource(dir:'js/plugins/angular', file:'angular-route.min.js')}" type="text/javascript"></script>
+  <script src="${resource(dir:'js/plugins/angular', file:'angular-animate.min.js')}" type="text/javascript"></script>
+  <asset:javascript src="application.js"/>
   <g:layoutHead />  
 </head>
-
 
 <body>
   <div id="wrapper">
@@ -50,13 +52,10 @@
       </div>
     </nav>
    
-
     <div id="content">
       <g:layoutBody />
     </div>
   </div>
-
-
 
   <!--
   <asset:javascript src="lib/angular/angular.min.js"/>
@@ -65,11 +64,8 @@
   <asset:javascript src="lib/angular/angular-cookies.min.js"/>
   -->
 
-  <script src="${resource(dir:'js/plugins/angular', file:'angular.min.js')}" type="text/javascript"></script>
-  <script src="${resource(dir:'js/plugins/angular', file:'angular-cookies.min.js')}" type="text/javascript"></script>
-  <script src="${resource(dir:'js/plugins/angular', file:'angular-route.min.js')}" type="text/javascript"></script>
-  <script src="${resource(dir:'js/plugins/angular', file:'angular-animate.min.js')}" type="text/javascript"></script>
-  <asset:javascript src="application.js"/>
   <!--<asset:javascript src="app/app.js"/>-->
+  
+
 </body>
 </html>

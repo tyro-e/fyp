@@ -1,10 +1,13 @@
 modules = {
 
-    angular {
-        resource url:'javascripts/angular.min.js'
-        resource url:'javascripts/app.js'
-        resource url:'javascripts/nav_menu.js'
+	/*
+    angular 
+    {
+        resource url:'js/lib/angular.min.js'
+        resource url:'js/lib/angular-animate.min.js'
+        resource url:'js/lib/angular-route.min.js'
+        resource url:'js/lib/app.js'
+        resource url:'js/lib/angular-cookies.min.js'
     }
-    
-
+    */
 }

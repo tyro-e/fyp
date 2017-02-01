@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html>
+<html ng-app="app" ng-controller="BandsInTownController">
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> 
+<!--<html lang="en" class="no-js">-->
+<!--<![endif]-->
 <head>
     <title>SUBSURFACE</title>
     <link rel="stylesheet" href="${resource(dir:'css',file:'homepage-main.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'bootstrap-datetimepicker.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.css')}" />
-    <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.print.css')}" media='print' />
+    <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.print.css')}" />
 </head>
 
 <body>
@@ -111,15 +117,8 @@
 
         </div>
 
-
-
-
-
-
-
-
-
-
+        <!-- ANGULARJS RENDER -->
+        <ng-view></ng-view>
         </div>
       </div>
     </div>
@@ -135,11 +134,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
 
 
 <script src="${resource(dir:'js/plugins', file:'bootstrap-datetimepicker.js')}" type="text/javascript"></script>

@@ -1,0 +1,60 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="BandsInTownController">
+  <head>
+    <title ng-bind="'BandsInTown - ' + search">BandsInTown</title>
+    <link rel="stylesheet" href="css/pure.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+  -->
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+      <a class="pure-menu-heading" href="#"><b>BandsInTown</b> <span class="span-style">Search Tour Schedules</span></a>
+    </div>     
+   
+    
+    <div class="content">
+      <div class="pure-g pad_b20">
+        <input type="text" ng-model="search" ng-change="change()" onclick="select()" class="pure-input" placeholder="Enter band or artist" autofocus />
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-5">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <div id="main-info" ng-include="'partials/main-info.html'"></div>
+            </div>
+            <div id="maps" class="pure-u-1">  
+              <div ng-include="'partials/maps.html'"></div>
+            </div>
+          </div>      
+        </div>
+        <div id="shows" class="pure-u-1 pure-u-md-2-5 related-results">
+          <div class="child">
+            <div id="related_results" ng-include="'partials/shows.html'"></div>
+          </div>  
+        </div>
+      </div>  
+    </div>
+    <div class="pure-g" id="bottom_nav">
+      <div class="pure-u-1 is-center">
+        <a href="#!" id="bottom_nav_button" class="pure-button ticket-background"><i style="font-size:200%; height:50px;" class="fa fa-list"></i></a>
+      </div>
+    </div>
+
+
+    <!--
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/nav_menu.js"></script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=ADD_IN_OWN_KEY!!"></script>
+  </body>
+</html>
+-->

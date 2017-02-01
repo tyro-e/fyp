@@ -1,5 +1,9 @@
+//= require jQuery
+//= require_tree .
+//= require_self
+
 'use strict';
-var app = angular.module('Angular-API', ['ngRoute']);
+var app = angular.module('app', ['ngRoute']);
 
 
 app.run(function($rootScope, $location, SecurityService) {
@@ -12,8 +16,8 @@ app.run(function($rootScope, $location, SecurityService) {
 app.config(['$routeProvider', function($routeProvider) {
     //$locationProvider.html5Mode(true);
     $routeProvider
-      .when('/artist', {
-          templateUrl: 'assets/index.html'
+      .when('/', {
+          templateUrl: 'assets/javascripts/app/views/index.html'
       })
 
  }]);
