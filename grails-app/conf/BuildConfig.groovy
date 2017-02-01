@@ -21,7 +21,7 @@ grails.project.fork = [
     console: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256]
 ]
 
-grails.project.dependency.resolver = "ivy" // or ivy
+grails.project.dependency.resolver = "ivy" // or maven
 
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
@@ -53,11 +53,13 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-         runtime 'mysql:mysql-connector-java:5.1.24'
-         runtime "org.grails.plugins:angularjs-resources:1.4.2"
+        runtime 'mysql:mysql-connector-java:5.1.24'
+        runtime "org.grails.plugins:angularjs-resources:1.4.2"
 
         // runtime "com.oracle.ojdbc7:12.1.0.2.0" 
-        // runtime "com.oracle.ojdbc6:11.2.0.4" 
+        // compile 'com.oracle:ojdbc6:11.2.0.4.0'
+
+        //compile "org.hibernate:hibernate-ehcache"
     }
 
     plugins {
@@ -68,7 +70,6 @@ grails.project.dependency.resolution = {
         compile ":scaffolding:2.0.1"
         compile ':cache:1.1.1'
         compile ":spring-security-core:2.0.0"
-
 
         compile "org.grails.plugins:asset-pipeline:2.7.4"
 

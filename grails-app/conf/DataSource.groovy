@@ -2,15 +2,15 @@ dataSource {
     pooled = true
     username = "root"
     password = "root"
-    driverClassName = "org.h2.Driver"
+    driverClassName = "com.mysql.jdbc.Driver"
+    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
 
-    //driverClassName = "oracle.jdbc.OracleDriver"
-
+    //driverClassName = "org.h2.Driver"
 }
 
 hibernate {
     cache.use_second_level_cache = true
-    cache.use_query_cache = false
+    cache.use_query_cache = true
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
 }
 
@@ -19,7 +19,10 @@ environments {
     development {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE"
+            url = "jdbc:mysql://localhost/fyp?useUnicode=yes&characterEncoding=UTF-8"
+
+
+            //url = "jdbc:h2:mem:devDb;MVCC=TRUE"
 
             /*
             dbCreate = 'update'
