@@ -7,6 +7,7 @@ dataSource {
 
     //driverClassName = "org.h2.Driver"
     
+    
 }
 
 hibernate {
