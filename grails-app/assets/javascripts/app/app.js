@@ -5,7 +5,7 @@
 'use strict';
 var app = angular.module('app', ['ngRoute']);
 
-
+/*
 app.run(function($rootScope, $location, SecurityService) {
     $rootScope.goto = function (hash) {
         $location.path(hash);
@@ -17,12 +17,22 @@ app.config(['$routeProvider', function($routeProvider) {
     //$locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
-          templateUrl: 'assets/javascripts/app/views/index.html'
-      })
-
+          templateUrl: '../static/partials/index.html',
+          controller: 'BandsInTownController',
+      });
  }]);
-  
 
+
+angular.module('app', []).
+  config(['$routeProvider', function($routeProvider) {
+  $routeProvider
+    .when('/', {
+        templateUrl: '../static/partials/index.html',   
+        controller: BandsInTownController
+    });
+}]);
+  
+*/
 
 app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;

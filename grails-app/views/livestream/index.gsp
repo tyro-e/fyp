@@ -1,8 +1,4 @@
 <%@ page import="fyp.Livestream" %>
-<!--
-<meta name="layout" content="main">
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +17,7 @@
         <button id="join-room">Join</button>
         <button id="open-or-join-room">Auto Start or Join</button>
 
-        <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
+        <div id="room-urls" style="text-align: center;display: none;margin: 15px -10px;border: 1px solid rgba(189, 189, 189, 0.5);"></div>
       </div>
 
       <div id="videos-container"></div>
@@ -71,9 +67,9 @@
       // RTCMultiConnection Code
       var connection = new RTCMultiConnection();
 
-      // by default, socket.io server is assumed to be deployed on your own URL
+      // socket.io server is assumed to be deployed on own URL
       connection.socketURL = '/';
-      // comment-out below line if you do not have your own socket.io server
+      // comment-out below line if no socket.io server
       connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
       connection.socketMessageEvent = 'video-broadcast-demo';
       connection.session = 
@@ -107,7 +103,7 @@
       function showRoomURL(roomid) {
         var roomHashURL = '#' + roomid;
         var roomQueryStringURL = '?roomid=' + roomid;
-        var html = '<h2>Unique URL for your room:</h2><br>';
+        var html = ' ';
         html += 'Hash URL: <a href="' + roomHashURL + '" target="_blank">' + roomHashURL + '</a>';
         html += '<br>';
         html += 'QueryString URL: <a href="' + roomQueryStringURL + '" target="_blank">' + roomQueryStringURL + '</a>';
@@ -115,6 +111,7 @@
         roomURLsDiv.innerHTML = html;
         roomURLsDiv.style.display = 'block';
       }
+
       (function() 
       {
         var params = {}, r = /([^&=]+)=?([^&]*)/g;

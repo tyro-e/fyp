@@ -27,6 +27,11 @@
     <async-supported>true</async-supported>
     </filter>
   <filter>
+    <filter-name>AssetPipelineFilter</filter-name>
+    <filter-class>asset.pipeline.grails.AssetPipelineFilter</filter-class>
+    <async-supported>true</async-supported>
+  </filter>
+  <filter>
     <filter-name>DeclaredResourcesPluginFilter</filter-name>
     <filter-class>org.grails.plugin.resource.ProcessingFilter</filter-class>
     <async-supported>true</async-supported>
@@ -43,11 +48,6 @@
   <filter>
     <filter-name>ResourcesDevModeFilter</filter-name>
     <filter-class>org.grails.plugin.resource.DevModeSanityFilter</filter-class>
-    <async-supported>true</async-supported>
-  </filter>
-  <filter>
-    <filter-name>AssetPipelineFilter</filter-name>
-    <filter-class>asset.pipeline.grails.AssetPipelineFilter</filter-class>
     <async-supported>true</async-supported>
   </filter>
 

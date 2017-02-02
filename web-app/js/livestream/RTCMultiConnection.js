@@ -1,15 +1,3 @@
-// Last time updated: 2017-01-18 3:37:39 AM UTC
-
-// _________________________
-// RTCMultiConnection v3.4.3
-
-// Open-Sourced: https://github.com/muaz-khan/RTCMultiConnection
-
-// --------------------------------------------------
-// Muaz Khan     - www.MuazKhan.com
-// MIT License   - www.WebRTC-Experiment.com/licence
-// --------------------------------------------------
-
 'use strict';
 
 "use strict";
