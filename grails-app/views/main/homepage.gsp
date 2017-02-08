@@ -1,21 +1,25 @@
-<html ng-app="app" ng-controller="BandsInTownController">
+<html ng-app="myApp" ng-controller="BandsInTownController">
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> 
-<!--<html lang="en" class="no-js">-->
-<!--<![endif]-->
+<html lang="en" class="no-js"><!--<![endif]-->
 <head>
     <title>SUBSURFACE</title>
     <link rel="stylesheet" href="${resource(dir:'css',file:'homepage-main.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'bootstrap-datetimepicker.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.print.css')}" />
+
+    <asset:javascript src="lib/angular.min.js"/>
+    <asset:javascript src="lib/angular-route.min.js"/>
+    <asset:javascript src="lib/angular-animate.min.js"/>
+    <asset:javascript src="lib/angular-cookies.min.js"/>
+    <asset:javascript src="app/app.js"/>
 </head>
 
 <body>
-
   <div class="content">
     <br>
       <div class="intro-body">
@@ -78,10 +82,11 @@
         </div>
 
         <sec:ifNotLoggedIn>
-          <div class = "register-text" style="text-align: center;">New to the site? <u style="cursor: pointer;color: rgba(255,255,255,0.4);">Register</u></div>
+          <div class = "register-text" style="text-align: center;">New to the site? 
+            <u style="cursor: pointer;color: rgba(255,255,255,0.4);">Register</u>
+          </div>
         </sec:ifNotLoggedIn>
 
-          
         <!-- BEGIN PAGE CONTENT -->
         <div class="homepage-section2">
           <div class = "eventSectionTitle">EVENTS</div>
@@ -111,66 +116,12 @@
 
         <!-- ANGULARJS RENDER -->
         <ng-view></ng-view>
-
-
-
-        <!-- BANDSINTOWN PART -->
-        <div class = "BandsInTownSection">
-          <div class="content">
-            <div class="pure-g pad_b20">
-              <input type="text" ng-model="search" ng-change="change()" onclick="select()" class="pure-input" placeholder="Enter artist" autofocus />
-            </div>
-            <div class="pure-g">
-              <div class="pure-u-1 pure-u-md-3-5">
-                <div class="pure-g">
-                  <div class="pure-u-1">
-                    <div id="main-info" ng-include="'partials/main-info.html'"></div>
-                  </div>
-                  <div id="maps" class="pure-u-1">  
-                    <div ng-include="'partials/maps.html'"></div>
-                  </div>
-                </div>      
-              </div>
-              <div id="shows" class="pure-u-1 pure-u-md-2-5 related-results">
-                <div class="child">
-                  <div id="related_results" ng-include="'partials/shows.html'"></div>
-                </div>  
-              </div>
-            </div>  
-          </div>
-          <div class="pure-g" id="bottom_nav">
-            <div class="pure-u-1 is-center">
-              <a href="#!" id="bottom_nav_button" class="pure-button ticket-background"><i style="font-size:200%; height:50px;" class="fa fa-list"></i></a>
-            </div>
-          </div>
-
-
-          <div ng-if="details.Response!=='False' && details != 'empty'">
-            <div ng-if="details.length == 1">
-              No shows for {{ search }}
-            </div>
-
-            <div ng-if="details.length > 1">
-              Upcoming shows for {{ details[0].artists[0].name }}:<hr>
-            </div>
-            
-            <ul class="rel-results">
-              <li ng-repeat="show in details" ng-hide="$first">
-                <a href="#" id="{{ $index + 1 }}" ng-click="update(show)">{{ show.formatted_datetime }}</a>
-                <br>&nbsp;&nbsp;<span class="smaller">{{ show.venue.name }} | {{ show.formatted_location }}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-
+        
         </div>
       </div>
     </div>
   </div>
 </div>  
-
-
 
 <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -180,21 +131,9 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  angular.module('myApp', []).
-  config(['$routeProvider', function($routeProvider) {
-  $routeProvider
-    .when('/', {
-        templateUrl: '../static/partials/index.html',   
-        controller: BandsInTownController
-    });
-}]);
-</script>
-
 <script src="${resource(dir:'js/plugins', file:'bootstrap-datetimepicker.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js/plugins', file:'moment.min.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js/plugins', file:'fullcalendar.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js', file:'homepage.js')}" type="text/javascript"></script>
-<script src="${resource(dir:'js', file:'app.js')}" type="text/javascript"></script>
 </body>
 </html>

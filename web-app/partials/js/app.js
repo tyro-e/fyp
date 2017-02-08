@@ -4,6 +4,19 @@
 
 'use strict';
 var app = angular.module('myApp', ['ngRoute']);
+
+
+app.config("$routeProvider", function($routeProvider, $locationProvider) 
+{
+  console.log("IN ROUTE FUNCTION");
+
+  $routeProvider.when("/", 
+  {
+      templateUrl: "/partials/index.html",   
+      controller: BandsInTownController
+  });
+  $locationProvider.html5Mode(true);
+});
   
 
 
@@ -30,6 +43,7 @@ app.controller('BandsInTownController', function($scope, $http){
 
 
   function fetch(){ 
+    console.log("IN FETCH FUNCTION");
     // search the API based on user input
     $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events.json?&api_version=2.0&callback=?&app_id=test_project", function(result) {
       $scope.$apply(function(){

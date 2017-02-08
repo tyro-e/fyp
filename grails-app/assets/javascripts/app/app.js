@@ -1,39 +1,25 @@
-//= require jQuery
-//= require_tree .
-//= require_self
-
 'use strict';
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute']);
 
-/*
+
 app.run(function($rootScope, $location, SecurityService) {
     $rootScope.goto = function (hash) {
         $location.path(hash);
-
     }
 })
 
-app.config(['$routeProvider', function($routeProvider) {
-    //$locationProvider.html5Mode(true);
-    $routeProvider
-      .when('/', {
-          templateUrl: '../static/partials/index.html',
-          controller: 'BandsInTownController',
-      });
+app.config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) 
+    {
+      console.log("LOGGED");
+
+      $routeProvider
+        .when('/', {
+            templateUrl: 'assets/app/views/index.html',
+            controller: 'BandsInTownController',
+        })
  }]);
-
-
-angular.module('app', []).
-  config(['$routeProvider', function($routeProvider) {
-  $routeProvider
-    .when('/', {
-        templateUrl: '../static/partials/index.html',   
-        controller: BandsInTownController
-    });
-}]);
   
-*/
-
 app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
   // sets the search scope if undefined - (on page load)
