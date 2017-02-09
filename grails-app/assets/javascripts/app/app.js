@@ -12,7 +12,7 @@ app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
   // sets the search scope if undefined - (on page load)
   if($scope.search === undefined){
-    $scope.search = "Karl Denson";
+    $scope.search = "";
     fetch();
   }
 
@@ -31,9 +31,13 @@ app.controller('BandsInTownController', function($scope, $http){
 
 
   function fetch(){ 
+   
     // search the API based on user input
-    $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events.json?&api_version=2.0&callback=?&app_id=test_project", function(result) {
-      $scope.$apply(function(){
+    $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events.json?&api_version=2.0&callback=?&app_id=test_project", function(result) 
+    {
+      $scope.$apply(function()
+      {
+         console.log("fetching");
         $scope.details = result;
       }, 0);
       // remove the map if no artist was found

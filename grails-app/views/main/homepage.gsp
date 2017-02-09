@@ -19,9 +19,7 @@
     <asset:javascript src="lib/angular-route.min.js"/>
     <asset:javascript src="lib/angular-animate.min.js"/>
     <asset:javascript src="lib/angular-cookies.min.js"/>
-    <asset:javascript src="app/app.js"/>
-    <asset:javascript src="app/nav_menu.js"/>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
+
 </head>
 
 <body>
@@ -140,5 +138,9 @@
 <script src="${resource(dir:'js/plugins', file:'moment.min.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js/plugins', file:'fullcalendar.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js', file:'homepage.js')}" type="text/javascript"></script>
+
+<asset:javascript src="app/app.js"/>
+<asset:javascript src="app/nav_menu.js"/>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
 </body>
 </html>
