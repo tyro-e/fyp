@@ -1,22 +1,27 @@
-<html ng-app="myApp" ng-controller="BandsInTownController">
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> 
-<html lang="en" class="no-js"><!--<![endif]-->
+<html>
 <head>
     <title>SUBSURFACE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
     <link rel="stylesheet" href="${resource(dir:'css',file:'homepage-main.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'bootstrap-datetimepicker.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.print.css')}" />
+
+
+    <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'pure.min.css')}" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 
     <asset:javascript src="lib/angular.min.js"/>
     <asset:javascript src="lib/angular-route.min.js"/>
     <asset:javascript src="lib/angular-animate.min.js"/>
     <asset:javascript src="lib/angular-cookies.min.js"/>
     <asset:javascript src="app/app.js"/>
+    <asset:javascript src="app/nav_menu.js"/>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
 </head>
 
 <body>

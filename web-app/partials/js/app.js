@@ -6,18 +6,10 @@
 var app = angular.module('myApp', ['ngRoute']);
 
 
-app.config("$routeProvider", function($routeProvider, $locationProvider) 
+app.config(['$routeProvider', function($routeProvider) 
 {
-  console.log("IN ROUTE FUNCTION");
-
-  $routeProvider.when("/", 
-  {
-      templateUrl: "/partials/index.html",   
-      controller: BandsInTownController
-  });
-  $locationProvider.html5Mode(true);
-});
-  
+  $routeProvider.when('/', { templateUrl: 'assets/app/views/index.html' })
+}]);
 
 
 app.controller('BandsInTownController', function($scope, $http){

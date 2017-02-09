@@ -2,23 +2,11 @@
 var app = angular.module('myApp', ['ngRoute']);
 
 
-app.run(function($rootScope, $location, SecurityService) {
-    $rootScope.goto = function (hash) {
-        $location.path(hash);
-    }
-})
+app.config(['$routeProvider', function($routeProvider) 
+{
+  $routeProvider.when('/', { templateUrl: 'assets/app/views/index.html' })
+}]);
 
-app.config(['$routeProvider', '$locationProvider',
-    function($routeProvider, $locationProvider) 
-    {
-      console.log("LOGGED");
-
-      $routeProvider
-        .when('/', {
-            templateUrl: 'assets/app/views/index.html',
-            controller: 'BandsInTownController',
-        })
- }]);
   
 app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
