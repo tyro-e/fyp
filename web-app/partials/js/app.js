@@ -8,15 +8,15 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider) 
 {
-  $routeProvider.when('/', { templateUrl: 'assets/app/views/index.html' })
+  $routeProvider.when('/', { templateUrl: 'assets/app/views/index.html', controller: "BandsInTownController" })
 }]);
 
-
+  
 app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
   // sets the search scope if undefined - (on page load)
   if($scope.search === undefined){
-    $scope.search = "";
+    $scope.search = "AFI";
     fetch();
   }
 
@@ -35,13 +35,15 @@ app.controller('BandsInTownController', function($scope, $http){
 
 
   function fetch(){ 
-    console.log("IN FETCH FUNCTION");
+   
     // search the API based on user input
-    $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events.json?&api_version=2.0&callback=?&app_id=test_project", function(result) {
-      $scope.$apply(function(){
-                 console.log("fetching");
-
+    $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events.json?&api_version=2.0&callback=?&app_id=test_project", function(result) 
+    {
+      $scope.$apply(function()
+      {
+         console.log("fetching");
         $scope.details = result;
+        console.log(result);
       }, 0);
       // remove the map if no artist was found
       if(result[0] === undefined){
@@ -56,6 +58,7 @@ app.controller('BandsInTownController', function($scope, $http){
   }
   
   function checkMap(){
+    console.log("checkMap");
     // checking the width of the screen
     // if the screen is < 768 the code will make sure the map is showing and the list of shows are hidden
     var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -72,6 +75,7 @@ app.controller('BandsInTownController', function($scope, $http){
   }
   
   function buildMap(){
+    console.log("buildMap");
     // building the content within the infowindow
     var contentString = "<strong>" + $scope.details[0].title + "</strong><br>&nbsp;<span>" + $scope.details[0].formatted_datetime + "</span>";
     if($scope.details[0].ticket_url !== null){
@@ -119,6 +123,7 @@ app.controller('BandsInTownController', function($scope, $http){
   }
   
   function removeMap(){
+    console.log("removeMap");
     // remove the map and it's background color
     var map = document.getElementById("map");
     map.innerHTML = "";
@@ -126,6 +131,7 @@ app.controller('BandsInTownController', function($scope, $http){
   }
 
   $scope.update = function(band){
+    console.log("update");
     // check to see if the layout is on mobile
     checkMap();
     // sort the array by date desc
@@ -147,6 +153,7 @@ app.controller('BandsInTownController', function($scope, $http){
   };
 
   $scope.select = function(){
+    console.log("select");
     this.setSelectionRange(0, this.value.length);
   }
 });

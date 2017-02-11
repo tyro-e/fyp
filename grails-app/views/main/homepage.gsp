@@ -15,11 +15,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 
-    <asset:javascript src="lib/angular.min.js"/>
-    <asset:javascript src="lib/angular-route.min.js"/>
-    <asset:javascript src="lib/angular-animate.min.js"/>
-    <asset:javascript src="lib/angular-cookies.min.js"/>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script> 
 </head>
 
 <body>
@@ -118,7 +115,7 @@
         </div>
 
         <!-- ANGULARJS RENDER -->
-        <ng-view></ng-view>
+        <span ng-view></span>
         
         </div>
       </div>
@@ -139,7 +136,8 @@
 <script src="${resource(dir:'js/plugins', file:'fullcalendar.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js', file:'homepage.js')}" type="text/javascript"></script>
 
-<asset:javascript src="app/app.js"/>
+
+<script src="${resource(dir:'js', file:'app.js')}" type="text/javascript"></script>
 <asset:javascript src="app/nav_menu.js"/>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
 </body>
