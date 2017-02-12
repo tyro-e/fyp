@@ -16,12 +16,14 @@ app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
   // sets the search scope if undefined - (on page load)
   if($scope.search === undefined){
+    console.log($scope.search);
     $scope.search = "AFI";
     fetch();
   }
 
   $scope.change = function(){
     if($scope.search != ""){
+      console.log("change: " + $scope.search);
       if(pendingTask){
         clearTimeout(pendingTask);
       }
@@ -35,7 +37,7 @@ app.controller('BandsInTownController', function($scope, $http){
 
 
   function fetch(){ 
-   
+    console.log("fetch: " + $scope.search);
     // search the API based on user input
     $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events.json?&api_version=2.0&callback=?&app_id=test_project", function(result) 
     {
