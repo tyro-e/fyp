@@ -15,6 +15,7 @@ app.config(['$routeProvider', function($routeProvider)
 app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
   // sets the search scope if undefined - (on page load)
+  
   if($scope.search === undefined){
     console.log($scope.search);
     $scope.search = "AFI";
@@ -45,7 +46,6 @@ app.controller('BandsInTownController', function($scope, $http){
       {
          console.log("fetching");
         $scope.details = result;
-        console.log(result);
       }, 0);
       // remove the map if no artist was found
       if(result[0] === undefined){
