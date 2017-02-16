@@ -21,7 +21,7 @@ app.controller('BandsInTownController', function($scope, $http){
 
   if($scope.search === undefined){
     console.log($scope.search);
-    $scope.search = "AFI";
+    $scope.search = "Elbow";
     fetch();
   }
 
@@ -45,7 +45,7 @@ app.controller('BandsInTownController', function($scope, $http){
   function fetch(){ 
     console.log("fetch: " + $scope.search);
     // search the API based on user input
-    $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events.json?&api_version=2.0&callback=?&app_id=test_project", function(result) 
+    $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland", function(result) 
     {
       $scope.$apply(function()
       {

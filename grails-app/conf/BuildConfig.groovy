@@ -55,12 +55,12 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         runtime 'mysql:mysql-connector-java:5.1.24'
-        //runtime "org.grails.plugins:angularjs-resources:1.4.2"
+
 
         // runtime "com.oracle.ojdbc7:12.1.0.2.0" 
         // compile 'com.oracle:ojdbc6:11.2.0.4.0'
-
         //compile "org.hibernate:hibernate-ehcache"
+        
     }
 
     plugins {
@@ -79,6 +79,7 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.10.2.2"
         runtime ":resources:1.2.1"
         compile ":spring-security-core:2.0.0"
+        runtime "org.grails.plugins:cors:1.1.8"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"

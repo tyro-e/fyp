@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-
+    <!-- ANGULAR JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script> 
 </head>
@@ -138,7 +138,7 @@
 
 
 <script src="${resource(dir:'js', file:'app.js')}" type="text/javascript"></script>
-<asset:javascript src="app/nav_menu.js"/>
+<script src="${resource(dir:'js', file:'nav_menu.js')}" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
 </body>
 </html>
