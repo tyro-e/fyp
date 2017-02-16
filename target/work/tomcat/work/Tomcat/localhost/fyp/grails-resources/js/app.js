@@ -14,13 +14,18 @@ app.config(['$routeProvider', function($routeProvider)
   
 app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
+  var search = $scope.search;
   // sets the search scope if undefined - (on page load)
   
+
+
   if($scope.search === undefined){
     console.log($scope.search);
     $scope.search = "AFI";
     fetch();
   }
+
+
 
   $scope.change = function(){
     if($scope.search != ""){

@@ -1,4 +1,4 @@
-<html>
+<html ng-app="myApp" ng-controller="BandsInTownController">
 <head>
     <title>SUBSURFACE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +71,7 @@
               </div>
 
               <div class="col-md-4 mainpage-event-search main-search-artist" style="text-align: center;">
-                <g:textField class = "artist-search" placeholder="Search artist.." name="query" value="${params.query}"/>
+                <g:textField ng-model="search" ng-change="change()" onclick="select()" class = "artist-search" placeholder="Search artist.." name="query" value="${params.query}"/>
               </div>
 
               <div class="col-md-4 mainpage-event-search main-search-venue" style="float: right;text-align: center;">
@@ -115,7 +115,7 @@
         </div>
 
         <!-- ANGULARJS RENDER -->
-        <span ng-view></span>
+        <div ng-view></div>
         
         </div>
       </div>

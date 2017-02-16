@@ -13,6 +13,7 @@
   <!-- JAVASCRIPTS -->
   <script src="${resource(dir:'js/plugins/jQuery', file:'jQuery-v3.1.1.js')}" type="text/javascript"></script>
   <script src="${resource(dir:'js/plugins/bootstrap', file:'bootstrap.js')}" type="text/javascript"></script>
+
   <g:layoutHead />  
 </head>
 
