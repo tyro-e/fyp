@@ -45,6 +45,7 @@ app.controller('BandsInTownController', function($scope, $http){
   function fetch(){ 
     console.log("fetch: " + $scope.search);
     // search the API based on user input
+    // http://api.bandsintown.com/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland
     $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland", function(result) 
     {
       $scope.$apply(function()
