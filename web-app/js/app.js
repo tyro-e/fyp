@@ -45,8 +45,9 @@ app.controller('BandsInTownController', function($scope, $http){
   function fetch(){ 
     console.log("fetch: " + $scope.search);
     // search the API based on user input
-    // http://api.bandsintown.com/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland
-    $.getJSON("http://api.bandsintown.com/artists/" + $scope.search + "/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland", function(result) 
+    //         http://api.bandsintown.com/artists/" + $scope.search + "/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland
+    
+    $.getJSON("http://api.bandsintown.com/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland", function(result) 
     {
       $scope.$apply(function()
       {
@@ -84,8 +85,9 @@ app.controller('BandsInTownController', function($scope, $http){
   
   function buildMap(){
     console.log("buildMap");
-    // building the content within the infowindow
+    // building the content within the info window
     var contentString = "<strong>" + $scope.details[0].title + "</strong><br>&nbsp;<span>" + $scope.details[0].formatted_datetime + "</span>";
+
     if($scope.details[0].ticket_url !== null){
       contentString += "&nbsp;&nbsp;<a href='" + $scope.details[0].ticket_url + "' target='_blank' class='pure-button'>Tickets <i class='fa fa-ticket'></i></a>";
     }

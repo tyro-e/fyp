@@ -3,20 +3,49 @@
     No shows for {{ search }}
   </div>
 
+  <!--
   <div ng-if="details.length > 1">
     Upcoming shows for {{ details[0].artists[0].name }}:<hr>
   </div>
+  -->
   
   <ul class="rel-results">
     <li ng-repeat="show in details">
-      <span >{{ show.artists[0].name }}</span>
 
-      <a href="#" id="{{ $index + 1 }}" ng-click="update(show)">{{ show.formatted_datetime }}</a>
-      <br>&nbsp;&nbsp;<span class="smaller">{{ show.venue.name }} | {{ show.formatted_location }}</span>
+      <div class = "event-item">
 
-      <a href="{{ show.ticket_url }}" title="Tickets for {{ show.title }}" target="_blank" class="pure-button ticket-background">Tickets <i class="fa fa-ticket"></i></a>
+        <a href="#" id="{{ $index + 1 }}" ng-click="update(show)">
+          {{ show.datetime }}
+        </a>
 
-      <a href="{{ show.facebook_rsvp_url }}" title="RSVP for {{ show.title}}" target="_blank" class="pure-button calendar-background">RSVP <i class="fa fa-calendar-o"></i></a>
+        <div class = "nameAndTicket">
+          <span class="col-md-6">
+            {{ show.artists[0].name }}
+          </span>
+
+          <span class = "col-md-6">
+            <a href="{{ show.ticket_url }}" title="Tickets for {{ show.title }}" target="_blank" class="pure-button ticket-background">
+              Tickets 
+              <i class="fa fa-ticket"></i>
+            </a>
+          </span>
+        </div>
+
+        <div class="venueAndRSVP">
+          <span class="smaller col-md-6">
+            {{ show.venue.name }}  {{ show.formatted_location }}
+          </span>
+
+          <span class = "col-md-6">
+            <a href="{{ show.facebook_rsvp_url }}" title="RSVP for {{ show.title}}" target="_blank" class="pure-button calendar-background">
+              RSVP 
+              <i class="fa fa-calendar-o"></i>
+            </a>
+          </span>
+        </div>
+
+      </div>
+
     </li>
   </ul>
 </div>
