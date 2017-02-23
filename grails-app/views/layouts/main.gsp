@@ -2,6 +2,8 @@
 <html ng-app="myApp" ng-controller="BandsInTownController">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="shortcut icon" href="">
+  
   <title>
     <g:layoutTitle default="SUBSURFACE" />
   </title>

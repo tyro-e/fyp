@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'bootstrap-datetimepicker.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.print.css')}" />
-    <link rel="stylesheet" href="${resource(dir:'css/upcoming',file:'style.css')}" />
+    <link rel="stylesheet" href="${resource(dir:'css/upcoming',file:'events-homepage.css')}" />
 
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'pure.min.css')}" />
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
@@ -111,19 +111,15 @@
                 </div>
               </div>
 
-              <div ng-view></div>
+             
             </div> 
 
             <!-- ANGULARJS RENDER: -->
+            <div ng-view></div>
+            
            
           </div>
-
-
         </div>
-
-        
-        
-        
         </div>
       </div>
     </div>
