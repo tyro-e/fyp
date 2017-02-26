@@ -1,15 +1,28 @@
-//= require jQuery
-//= require_tree .
-//= require_self
-
 'use strict';
+
 var app = angular.module('myApp', ['ngRoute']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.config(['$routeProvider', function($routeProvider) 
 {
   $routeProvider.when('/', { templateUrl: 'assets/app/views/index.html' })
 }]);
-
   
 app.controller('BandsInTownController', function($scope, $http){
   var pendingTask;
@@ -46,7 +59,7 @@ app.controller('BandsInTownController', function($scope, $http){
       {
         $scope.$apply(function()
         {
-          console.log("fetching1");
+          console.log("fetching 1");
           $scope.details = result;
         }, 0);
 
@@ -62,7 +75,7 @@ app.controller('BandsInTownController', function($scope, $http){
       {
         $scope.$apply(function()
         {
-          console.log("fetching2");
+          console.log("fetching 2");
           $scope.details = result;
         }, 0);
 
@@ -78,9 +91,6 @@ app.controller('BandsInTownController', function($scope, $http){
       });   
     } 
   }
-
-
-  
 
   
   function buildMap(){

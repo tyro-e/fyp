@@ -141,7 +141,6 @@
 
 
 <script src="${resource(dir:'js', file:'app.js')}" type="text/javascript"></script>
-<script src="${resource(dir:'js', file:'nav_menu.js')}" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
 </body>
 </html>

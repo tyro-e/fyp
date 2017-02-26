@@ -6,6 +6,9 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'artist.label', default: 'Artist')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+
+	    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+
 	</head>
 	<body>
 		<a href="#list-artist" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -54,5 +57,17 @@
 				<g:paginate total="${artistInstanceCount ?: 0}" />
 			</div>
 		</div>
+
+
+		 <form action="http://s3.amazonaws.com/fyp-subsurface" method="post" enctype="multipart/form-data">
+			<input type="text" name="key" value="testfile.txt" />
+			<input type="text" name="acl" value="public-read" />
+			<input type="text" name="content-type" value="text/plain" />
+			<input type="hidden" name="AWSAccessKeyId" value="AKIAJT3UEF4EX5NSCN4A" />
+			<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMDktMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJmeXAtc3Vic3VyZmFjZSIgfSwKICAgIHsiYWNsIjogInB1YmxpYy1yZWFkIiB9LAogICAgWyJlcSIsICIka2V5IiwgInRlc3RmaWxlLnR4dCJdLAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgInRleHQvIl0sCiAgXQp9Cg==" />
+			<input type="hidden" name="signature" value="aGBe9LoxV0L4/yrnRpljNX1XSps=" />
+			<input name="file" type="file" />
+			<input name="submit" value="Upload" type="submit" />
+			</form>
 	</body>
 </html>
