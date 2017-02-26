@@ -97,6 +97,8 @@
 
 .homepage-section2{
 	background-color: white;
+  height: 100vh;
+  overflow: none;
 }
 
 

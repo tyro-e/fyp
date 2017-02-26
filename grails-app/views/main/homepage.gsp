@@ -91,7 +91,7 @@
         <div class="homepage-section2">
           <div class = "eventSectionTitle">EVENTS</div>
 
-          <div class = "container row" style="width: 100%;">
+          <div class = "container row" style="width: 100%;margin-right: 0;margin-left: 0;padding-right: 0;padding-left: 0;">
             <div class="col-md-6" style="float: none;margin:0 auto;">
               <div class = "event-date" style="display: inline-flex;font-size: 24px;">
                 FRIDAY <div style="color: red">  //  </div> JANUARY 13<span class="ordinal">TH</span> 2017

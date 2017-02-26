@@ -2,23 +2,6 @@
 
 var app = angular.module('myApp', ['ngRoute']);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.config(['$routeProvider', function($routeProvider) 
 {
   $routeProvider.when('/', { templateUrl: 'assets/app/views/index.html' })
@@ -98,6 +81,40 @@ app.controller('BandsInTownController', function($scope, $http){
     // building the content within the info window
     var contentString = "<strong>" + $scope.details[0].title + "</strong><br>&nbsp;<span>" + $scope.details[0].formatted_datetime + "</span>";
 
+    var mapStyle = [
+      {
+        featureType: "administrative",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+      },{
+        featureType: "poi",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+      },{
+        featureType: "water",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+      },{
+        featureType: "road",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+      },{
+        featureType: "transit",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+      }
+    ]
+
     if($scope.details[0].ticket_url !== null){
       contentString += "&nbsp;&nbsp;<a href='" + $scope.details[0].ticket_url + "' target='_blank' class='pure-button'>Tickets <i class='fa fa-ticket'></i></a>";
     }
@@ -116,7 +133,7 @@ app.controller('BandsInTownController', function($scope, $http){
       // centering & zoom level of map
       map = new google.maps.Map(document.getElementById('map'), {     
         center: myLatLng,
-        zoom: 12,
+        zoom: 17,
         scrollwheel: false
       });  
       
@@ -138,6 +155,7 @@ app.controller('BandsInTownController', function($scope, $http){
       });
       
       marker.setMap(map);
+      map.set('styles', mapStyle);
     }
     else{
       removeMap();
