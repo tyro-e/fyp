@@ -24,6 +24,15 @@ $(document).ready(function()
 	});
 });
 
+$(document).ready(function()
+{
+    $('.event-item').click(function()
+    {	
+    	console.log("CLICKITY");
+        $('#maps').css('display', 'block');
+    });
+});
+
 
 
 // Date picker

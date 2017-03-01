@@ -3,6 +3,18 @@ body {
   background-attachment: fixed;
 }
 
+/* REMOVE GOOGLE MAPS TEXTS */
+.gmnoprint a, .gmnoprint span {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+.gmnoprint:last-child {
+    display: none !important;
+}
+
 .content {
   position: relative;
 }
@@ -30,10 +42,6 @@ ul.rel-results {
   -webkit-animation-delay: 1s;
 }
 
-.smaller {
-  font-size: 80%;
-}
-
 #map{
   z-index: 1;
   height: 100vh;
@@ -43,6 +51,7 @@ ul.rel-results {
 
 #maps{
   position: absolute;
+  display: none;
   /*filter: blur(0.5px) invert(1) opacity(0.8) saturate(10);*/
 }
 
@@ -100,7 +109,7 @@ ul.rel-results {
   border: 1px solid black;
 }
 
-#main-info, #shows, #maps{
+#main-info, #shows{
   display: inline-block;
   zoom: 1;
   letter-spacing: normal;
@@ -108,3 +117,23 @@ ul.rel-results {
   vertical-align: top;
   text-rendering: auto;
 }
+
+.artist-name{
+  text-transform: uppercase;
+  color: black;
+}
+
+.venue-name{
+  text-transform: uppercase;
+  font-size: 80%;
+  color: black;
+}
+
+.rsvp{
+
+}
+
+.tickets{
+
+}
+

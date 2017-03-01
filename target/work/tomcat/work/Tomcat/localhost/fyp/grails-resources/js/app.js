@@ -17,8 +17,6 @@ app.controller('BandsInTownController', function($scope, $http){
     fetch();
   }
 
-
-
   $scope.change = function(){
     if($scope.search != ""){
       console.log("change: " + $scope.search);
@@ -134,7 +132,8 @@ app.controller('BandsInTownController', function($scope, $http){
       map = new google.maps.Map(document.getElementById('map'), {     
         center: myLatLng,
         zoom: 17,
-        scrollwheel: false
+        scrollwheel: false,
+        disableDefaultUI: true
       });  
       
       // building the content within the infowindow
@@ -180,6 +179,7 @@ app.controller('BandsInTownController', function($scope, $http){
       return c-d; 
     });
 
+    
     // pull the selected show out of the array of shows
     for(var i = 0; i < $scope.details.length; i++){
       if(band.id == $scope.details[i].id){
@@ -189,6 +189,7 @@ app.controller('BandsInTownController', function($scope, $http){
 
     // put the selected show first in the array of shows
     $scope.details.unshift(band);
+    
     
     buildMap();
   };
