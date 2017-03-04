@@ -663,11 +663,6 @@ h4 { font-size: 1.6em; }
 h5 { font-size: 1.4em; }
 h6 { font-size: 1.2em; }
  
-a { color: #FF9900; text-decoration: none; }
-a:link {}
-a:visited {}
-a:hover { text-decoration: underline overline;}
-a:active {}
  
 div#wrapper {
   text-align: left;

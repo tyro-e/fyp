@@ -46,14 +46,14 @@ ul.rel-results {
   z-index: 1;
   height: 100vh;
   width: 100%;
-  margin-top: 15px;
 }
 
 #maps{
   position: absolute;
-  display: none;
+  width: 100%;
   /*filter: blur(0.5px) invert(1) opacity(0.8) saturate(10);*/
 }
+
 
 #shows{
   z-index: 2;
@@ -71,14 +71,22 @@ ul.rel-results {
 .twitter-background {
   background-color: #4099FF;
 }
-.ticket-background {
-  background-color: limegreen;
-}
 .website-background {
   background-color: lightgrey;
 }
 .calendar-background {
-  background-color: lightcoral;
+  background-color: black;
+}
+.ticket-background {
+  background-color: black;
+}
+
+.button-main{
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 /* Paddings */
@@ -106,7 +114,7 @@ ul.rel-results {
 
 .event-item{
   height: 150px;
-  border: 1px solid black;
+  border-top: 1px solid grey;
 }
 
 #main-info, #shows{
@@ -121,19 +129,37 @@ ul.rel-results {
 .artist-name{
   text-transform: uppercase;
   color: black;
+  font-size: 30px;
+  padding: 20px;
+  float: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.artist-item{
+  text-decoration: none !important;
+  letter-spacing: 2px;
+  color: white;
 }
 
 .venue-name{
   text-transform: uppercase;
-  font-size: 80%;
+  font-size: 18px;
+  padding:20px;
   color: black;
+  float: left;
+}
+.venue-item{
+  color: white;
+  text-decoration: none !important;
 }
 
 .rsvp{
-
+  float: right;
+  padding: 20px;
 }
 
 .tickets{
-
+  float: right;
+  padding: 20px;
 }
 

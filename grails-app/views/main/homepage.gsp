@@ -17,6 +17,10 @@
     <!-- ANGULAR JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script> 
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Montserrat+Subrayada|Nunito|Poppins|Work+Sans" rel="stylesheet">
+
+
 </head>
 
 <body>
