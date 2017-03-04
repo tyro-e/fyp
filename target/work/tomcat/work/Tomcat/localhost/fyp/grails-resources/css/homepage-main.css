@@ -89,10 +89,11 @@
 }
 
 .eventSectionTitle{
-	position: relative;
-	color: black;
+	position: absolute;
+	color: white;
 	font-size: 50px;
-	top: -53px;
+	/*top: -53px;*/
+	z-index: 10;
 }
 
 .homepage-section2{

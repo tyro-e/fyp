@@ -93,31 +93,9 @@
 
         <!-- BEGIN PAGE CONTENT -->
         <div class="homepage-section2">
-          <div class = "eventSectionTitle">EVENTS</div>
+          
 
           <div class = "container row" style="width: 100%;margin-right: 0;margin-left: 0;padding-right: 0;padding-left: 0;">
-            <div class="col-md-6" style="float: none;margin:0 auto;">
-              <div class = "event-date" style="display: inline-flex;font-size: 24px;">
-                FRIDAY <div style="color: red">  //  </div> JANUARY 13<span class="ordinal">TH</span> 2017
-              </div>
-
-              <div class = "event-item" style="height: 150px;border: 1px solid black;">
-                <div class = "artist-name">
-                  EXAMPLE ARTIST
-                </div>
-
-                <div class = "venue-name">
-                  at Olympia Theatre
-                </div>
-
-                <div class = "attend-button" style="float: right;">
-                  ATTEND
-                </div>
-              </div>
-
-             
-            </div> 
-
             <!-- ANGULARJS RENDER: -->
             <div ng-view></div>
             

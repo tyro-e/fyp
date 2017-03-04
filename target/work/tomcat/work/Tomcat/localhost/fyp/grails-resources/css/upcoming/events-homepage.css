@@ -3,6 +3,8 @@ body {
   background-attachment: fixed;
 }
 
+
+
 /* REMOVE GOOGLE MAPS TEXTS */
 .gmnoprint a, .gmnoprint span {
     display:none;
@@ -14,6 +16,20 @@ body {
 .gmnoprint:last-child {
     display: none !important;
 }
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+/**************************/
+
+
 
 .content {
   position: relative;
@@ -124,13 +140,14 @@ ul.rel-results {
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
+  z-index: 10;
 }
 
 .artist-name{
   text-transform: uppercase;
   color: black;
   font-size: 30px;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   float: left;
   font-family: 'Poppins', sans-serif;
 }
@@ -140,26 +157,44 @@ ul.rel-results {
   letter-spacing: 2px;
   color: white;
 }
+.artist-item:hover{
+  text-decoration: none !important;
+  color: white;
+}
 
 .venue-name{
   text-transform: uppercase;
   font-size: 18px;
-  padding:20px;
+  padding:0px 20px 20px 20px;
   color: black;
   float: left;
 }
 .venue-item{
-  color: white;
+  color: rgba(255,255,255,0.7);
   text-decoration: none !important;
+  letter-spacing: 1px;
+}
+
+
+
+.tickets{
+  float: right;
+  padding: 20px 20px 0px 20px;
 }
 
 .rsvp{
   float: right;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
 }
 
-.tickets{
-  float: right;
-  padding: 20px;
+.event-details-section{
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
 }
 
+.event-main-info{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
