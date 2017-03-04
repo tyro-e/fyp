@@ -38,6 +38,7 @@ app.controller('BandsInTownController', function($scope, $http){
     var dateConverted = newDate.toDateString();
     date = dateConverted;
 
+
     console.log(dateConverted);
   }
 
@@ -640,6 +641,7 @@ app.controller('BandsInTownController', function($scope, $http){
     $scope.details.sort(function(a,b){
       var c = new Date(a.datetime);
       var d = new Date(b.datetime);
+
       return c-d; 
     });
 

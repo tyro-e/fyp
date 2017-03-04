@@ -25,9 +25,6 @@ $(document).ready(function()
 });
 
 
-
-
-
 // Date picker
 $(function () {
     $('#datetimepicker1').datetimepicker({

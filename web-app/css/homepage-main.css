@@ -1,7 +1,38 @@
+body {
+  background-repeat: repeat !important;
+  background-attachment: fixed;
+}
+
 *:focus 
 {
     outline: none;
 }
+
+
+/* REMOVE GOOGLE MAPS TEXTS */
+.gmnoprint a, .gmnoprint span {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+.gmnoprint:last-child {
+    display: none !important;
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+/**************************/
+
 
 .brand-heading{
 	text-align: center;
@@ -88,18 +119,10 @@
     fill: white;
 }
 
-.eventSectionTitle{
-	position: absolute;
-	color: white;
-	font-size: 50px;
-	/*top: -53px;*/
-	z-index: 10;
-}
-
 .homepage-section2{
 	background-color: white;
   height: 100vh;
-  overflow: none;
+  overflow: hidden;
 }
 
 
@@ -107,5 +130,234 @@
   font-size: 9px;
   position: relative;
   top: 0.5em;
+}
+
+
+
+
+.content {
+  position: relative;
+}
+
+ul.rel-results {
+  list-style-type: none;
+}
+
+.nojs {
+  padding:2px;
+  padding-left:6px;
+  margin-bottom:5px;
+  background:#ff0000;
+  color:#ffffff;
+  font-size:15px;
+  border:1px solid #ff0000;
+  border-radius:5px;
+}
+
+.artist-poster {
+  float:left;
+  width: 150px;
+  margin-right: 10px;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+#map{
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+}
+
+#maps{
+  position: absolute;
+  width: 100%;
+  /*filter: blur(0.5px) invert(1) opacity(0.8) saturate(10);*/
+}
+
+
+#shows{
+  z-index: 2;
+  height: 100vh;
+}
+
+#main-info{
+  z-index: 2;
+}
+
+/* Artist/Main Show Stylings */
+.facebook-background {
+  background-color: #3B5998;
+}
+.twitter-background {
+  background-color: #4099FF;
+}
+.website-background {
+  background-color: lightgrey;
+}
+.calendar-background {
+  background-color: black;
+}
+.ticket-background {
+  background-color: black;
+}
+
+.button-main{
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+/* Paddings */
+.button-row-1{
+  padding-bottom: 10px;
+}
+
+.pad_b20{
+  padding-bottom: 20px;
+}
+
+/* Show list stylings */
+.related-results{
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.child{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 15px;
+}
+
+.event-item{
+  height: 150px;
+  border-top: 1px solid grey;
+}
+
+#main-info, #shows{
+  display: inline-block;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  z-index: 10;
+  margin-top: 2%;
+}
+
+#left-panel{
+	margin-top: 1%;
+}
+
+.artist-name{
+  text-transform: uppercase;
+  color: black;
+  font-size: 30px;
+  padding: 20px 20px 0px 20px;
+  float: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.artist-item{
+  text-decoration: none !important;
+  letter-spacing: 2px;
+  color: white;
+}
+.artist-item:hover{
+  text-decoration: none !important;
+  color: white;
+}
+
+.venue-name{
+  text-transform: uppercase;
+  font-size: 18px;
+  padding:0px 20px 20px 20px;
+  color: black;
+  float: left;
+}
+.venue-item{
+  color: rgba(255,255,255,0.7);
+  text-decoration: none !important;
+  letter-spacing: 1px;
+}
+
+
+
+.tickets{
+  float: right;
+  padding: 20px 20px 0px 20px;
+}
+
+.rsvp{
+  float: right;
+  padding: 0px 20px 20px 20px;
+}
+
+.event-details-section{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+}
+
+.eventSectionTitle{
+	color: white;
+	font-size: 55px;
+	/*top: -53px;*/
+	letter-spacing: 1px;
+	z-index: 10;
+}
+
+.artist-search-field{
+	font-size: 50px;
+	padding: 0;
+	width: 85%;
+}
+
+.event-main-info{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.event-date-time{
+  color: white;
+}
+
+
+
+
+
+
+.datetimepicker-inline{width: 85% !important;}
+.datetimepicker table{width: 100%;}
+
+.datetimepicker table tr td.active.active
+{
+	background-image: linear-gradient(to bottom, #191919, #080808);
+	background-color: black !important;
+}
+
+/* cells */
+.datetimepicker  td{
+	padding: 1% !important;
+	font-size: 27px;
+}
+
+
+.datetimepicker td{
+	background-color: rgba(181, 181, 181, 0.68);
+	border-radius: 0 !important;
+}
+
+.datetimepicker  td, .datetimepicker th{
+	letter-spacing: 1px;
+}
+
+.datetimepicker table tr td.old, .datetimepicker table tr td.new{
+	color: white;
+	background-color:rgba(191, 191, 191, 0.25);
 }
 
