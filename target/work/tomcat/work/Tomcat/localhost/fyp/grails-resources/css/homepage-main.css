@@ -363,16 +363,21 @@ ul.rel-results {
 .datetimepicker-inline{width: 85% !important;}
 .datetimepicker table{width: 100%;}
 
-.datetimepicker table tr td.active.active
+.datetimepicker table tr td.active, .datetimepicker table tr td.active:hover, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover
 {
-	background-image: linear-gradient(to bottom, #191919, #080808);
+	background-image: linear-gradient(to bottom, #191919, #080808) !important;
 	background-color: black !important;
+  color: red !important;
 }
 
 /* cells */
 .datetimepicker  td{
 	padding: 1% !important;
 	font-size: 27px;
+}
+
+.table-condensed>tbody>tr>td{
+  font-family: 'Poppins';
 }
 
 
