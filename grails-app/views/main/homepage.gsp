@@ -9,16 +9,13 @@
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'bootstrap-datetimepicker.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'fullcalendar.print.css')}" />
-    <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'pure.min.css')}" />
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${resource(dir:'css',file:'responsiveness.css')}" />
 
     <!-- ANGULAR JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script> 
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Montserrat+Subrayada|Nunito|Poppins|Work+Sans" rel="stylesheet">
 </head>
 
 <body>
