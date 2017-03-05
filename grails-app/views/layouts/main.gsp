@@ -26,7 +26,7 @@
       <div class="container-fluid">
 
         <ul class="nav navbar-nav">
-          <li><a class="" href="/fyp/">HOME</a></li>
+          <li><a class="" href="/fyp/" style="font-size: 18px;font-weight: 600;">SUBSURFACE</a></li>
           <li><g:link controller = "event">UPCOMING</g:link></li> 
           <li><g:link controller = "artist">ARTISTS</g:link></li>
           <li><g:link controller = "venue">VENUES</g:link></li> 
@@ -49,7 +49,8 @@
 
       </div>
     </nav>
-   
+
+
     <div id="content">
       <g:layoutBody />
     </div>
