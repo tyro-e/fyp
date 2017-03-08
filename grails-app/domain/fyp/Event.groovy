@@ -2,17 +2,22 @@ package fyp
 
 class Event {
 
-	Long id
-	Boolean livestream
+	//int id
+	//int bandsintown_id
+	String artist
+	String venue
+	/*
 	Date eventTime
-	Double price
+	String ticket_url
+	int longitude
+	int latitude
+	Boolean livestream
+	*/
 
 	static hasMany = [artists:Artist]
 	static belongsTo = Artist
 
     static constraints = {
-    	livestream blank:false
-    	eventTime blank:false
-    	price blank:false
+    	//bandsintown_id unique:true
     }
 }

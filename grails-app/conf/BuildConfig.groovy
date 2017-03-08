@@ -57,6 +57,7 @@ grails.project.dependency.resolution = {
         runtime 'mysql:mysql-connector-java:5.1.24'
 
 
+
         // runtime "com.oracle.ojdbc7:12.1.0.2.0" 
         // compile 'com.oracle:ojdbc6:11.2.0.4.0'
         //compile "org.hibernate:hibernate-ehcache"
@@ -80,6 +81,7 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.1"
         compile ":spring-security-core:2.0.0"
         runtime "org.grails.plugins:cors:1.1.8"
+        runtime ":rest:0.7"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"

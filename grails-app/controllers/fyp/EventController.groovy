@@ -1,107 +1,49 @@
 package fyp
 
+import grails.rest.*
+import grails.converters.*
+import groovyx.net.http.HTTPBuilder
+import static groovyx.net.http.Method.GET
+import static groovyx.net.http.ContentType.JSON
 
 
-import static org.springframework.http.HttpStatus.*
-import grails.transaction.Transactional
+class EventController extends RestfulController
+{
+    static responseFormats = ['json', 'xml']
 
-@Transactional(readOnly = true)
-class EventController {
-
-    static scaffold = true
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Event.list(params), model:[eventInstanceCount: Event.count()]
-
-        //render file: 'grails-app/assets/index.html', contentType: 'text/html'
+    EventController() {
+        super(Event)
     }
 
-    def show(Event eventInstance) {
-        respond eventInstance
-    }
+    def populate() {
 
-    def create() {
-        respond new Event(params)
-    }
+        def http = new HTTPBuilder( 'http://api.bandsintown.com/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland' )
 
-    @Transactional
-    def save(Event eventInstance) {
-        if (eventInstance == null) {
-            notFound()
-            return
-        }
+        def JSONData
 
-        if (eventInstance.hasErrors()) {
-            respond eventInstance.errors, view:'create'
-            return
-        }
+        http.request( GET, JSON ) {
 
-        eventInstance.save flush:true
-
-        request.withFormat {
-            form {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'eventInstance.label', default: 'Event'), eventInstance.id])
-                redirect eventInstance
+            response.success = { resp, json ->
+            
+                JSONData = JSON.parse(json.text)
             }
-            '*' { respond eventInstance, [status: CREATED] }
-        }
-    }
-
-    def edit(Event eventInstance) {
-        respond eventInstance
-    }
-
-    @Transactional
-    def update(Event eventInstance) {
-        if (eventInstance == null) {
-            notFound()
-            return
         }
 
-        if (eventInstance.hasErrors()) {
-            respond eventInstance.errors, view:'edit'
-            return
-        }
+        int numberEvents = 0
 
-        eventInstance.save flush:true
+        JSONData.each {
 
-        request.withFormat {
-            form {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Event.label', default: 'Event'), eventInstance.id])
-                redirect eventInstance
+            def event = new Event(artist: it.artists.name.toString(), venue: it.venue.name.toString())
+
+            if (!event.save()) {
+                event.errors.allErrors.each {
+                    println it
+                }
+            } else {
+                numberEvents++
             }
-            '*'{ respond eventInstance, [status: OK] }
-        }
-    }
-
-    @Transactional
-    def delete(Event eventInstance) {
-
-        if (eventInstance == null) {
-            notFound()
-            return
         }
 
-        eventInstance.delete flush:true
-
-        request.withFormat {
-            form {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Event.label', default: 'Event'), eventInstance.id])
-                redirect action:"index", method:"GET"
-            }
-            '*'{ render status: NO_CONTENT }
-        }
-    }
-
-    protected void notFound() {
-        request.withFormat {
-            form {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'eventInstance.label', default: 'Event'), params.id])
-                redirect action: "index", method: "GET"
-            }
-            '*'{ render status: NOT_FOUND }
-        }
+        render "${numberEvents} events loaded"
     }
 }

@@ -9,7 +9,8 @@
   </title>
 
   <!-- STYLESHEETS -->
-  <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
+  <!--<link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />-->
+  <link rel="stylesheet" href="${resource(dir:'css',file:'main2.css')}" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="${resource(dir:'css/plugins',file:'pure.min.css')}" />
 
@@ -19,7 +20,6 @@
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Bungee|Montserrat+Subrayada|Nunito|Poppins|Work+Sans" rel="stylesheet">
-
   <g:layoutHead />  
 </head>
 

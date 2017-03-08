@@ -20,7 +20,6 @@
 
 <body>
   <div class="content">
-    <br>
       <div class="intro-body">
         <div class="container homepage-section1">
 
