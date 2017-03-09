@@ -213,14 +213,26 @@ ul.rel-results {
 }
 
 /* Artist/Main Show Stylings */
-.facebook-background {
+.facebook-background, .twitter-background, .website-background {
+  padding: .5em 1em;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.facebook-background{
   background-color: #3B5998;
+  color: white;
 }
 .twitter-background {
   background-color: #4099FF;
+  color: white;
 }
 .website-background {
   background-color: lightgrey;
+  color: black;
 }
 .calendar-background {
   background-color: black;
@@ -274,8 +286,15 @@ ul.rel-results {
   vertical-align: top;
   text-rendering: auto;
   z-index: 10;
+  padding-bottom: 2%;
+}
+#shows{
   margin-top: 2%;
   padding-bottom: 2%;
+}
+#main-info{
+  margin-top: 3%;
+  padding-bottom: 3%;
 }
 
 #left-panel{
@@ -348,18 +367,35 @@ ul.rel-results {
 
 .event-main-info{
   position: absolute;
-  bottom: 0;
-  right: 0;
+  width: 100%;
 }
 
 .event-date-time{
   color: white;
 }
 
+/* RIGHT PANEL EVENT INFO */
+
+.venue_name{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.date_time{
+  color: white;
+  letter-spacing: 1px;
+}
+
+._location{
+  color: white;
+  letter-spacing: 1px;
+}
 
 
 
 
+/* ON PAGE CALENDAR */
 
 .datetimepicker-inline{width: 85% !important;}
 .datetimepicker table{width: 100%;}
