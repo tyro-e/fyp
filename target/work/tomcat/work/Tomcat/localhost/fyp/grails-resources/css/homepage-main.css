@@ -212,7 +212,7 @@ ul.rel-results {
   z-index: 2;
 }
 
-/* Artist/Main Show Stylings */
+/* INFO BUTTONS */
 .facebook-background, .twitter-background, .website-background {
   padding: .5em 1em;
   display: inline-block;
@@ -244,10 +244,14 @@ ul.rel-results {
 .button-main{
   background-color: black;
   color: white;
-  width: 100px;
+  width: 133px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid white;
+}
+
+.more-info-button{
+  border: 1px solid red;
 }
 
 /* Paddings */
@@ -333,16 +337,9 @@ ul.rel-results {
   letter-spacing: 1px;
 }
 
-
-
-.tickets{
+.tickets, .rsvp{
   float: right;
-  padding: 20px 20px 0px 20px;
-}
-
-.rsvp{
-  float: right;
-  padding: 0px 20px 20px 20px;
+  padding: 20px 20px 0px 0px;
 }
 
 .event-details-section{
