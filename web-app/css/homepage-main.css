@@ -210,6 +210,7 @@ ul.rel-results {
 
 #main-info{
   z-index: 2;
+  display: none;
 }
 
 /* INFO BUTTONS */
@@ -283,7 +284,6 @@ ul.rel-results {
 }
 
 #main-info, #shows{
-  display: inline-block;
   zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
@@ -377,6 +377,7 @@ ul.rel-results {
   color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 110%;
 }
 
 .date_time{

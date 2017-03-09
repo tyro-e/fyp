@@ -25,31 +25,13 @@ $(document).ready(function()
 });
 
 
-// Date picker
-$(function () {
-    $('#datetimepicker1').datetimepicker({
-        useCurrent: false,
-        format: "dd/M",
-        autoclose: true,
-        todayBtn: false,
-        viewMode: 'days',
-        minView: 2
-    });
-    $('#datetimepicker2').datetimepicker({
-
-        format: "dd/M",
-        autoclose: true,
-        todayBtn: false,
-        viewMode: 'days',
-        minView: 2
-    });
-
-    $("#datetimepicker1").on("dp.change", function (e) {
-        $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
-    });
-    $("#datetimepicker2").on("dp.change", function (e) {
-        $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
-    });
+$(document).ready(function()
+{
+	$('.event-item').click(function()
+	{
+		console.log('HALLAOO');
+		$('#main-info').css('display','block');
+	});
 });
 
 

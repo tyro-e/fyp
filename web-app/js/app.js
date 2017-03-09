@@ -70,12 +70,14 @@ app.controller('BandsInTownController', function($scope, $http){
         {
           console.log("fetching 2");
           $scope.details = result;
+          angular.element('#main-info').css('display', 'block');
         }, 0);
 
         // remove the map if no artist was found
         if(result[0] === undefined){
           removeMap();
           fetch();
+          angular.element('#main-info').css('display', 'none');
         }
 
         else{
@@ -650,12 +652,25 @@ app.controller('BandsInTownController', function($scope, $http){
     for(var i = 0; i < $scope.details.length; i++){
       if(band.id == $scope.details[i].id){
         $scope.details;
+        console.log($scope.details);
       }
     }
 
     // put the selected show first in the array of shows
     $scope.details.unshift(band);
-    buildMap();
+
+    var artistName = $scope.details[0].artists[0].name;
+
+    $.getJSON("http://api.bandsintown.com/artists/" + artistName + "/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland", function(result) 
+      {
+        $scope.$apply(function()
+        {
+          $scope.details = result;
+          angular.element('#main-info').css('display', 'block');
+          buildMap();
+        }, 0);
+      });   
+
   };
 
   $scope.select = function(){
