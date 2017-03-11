@@ -1,4 +1,3 @@
-<%@ page import="fyp.Livestream" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,30 +5,34 @@
     <meta name="layout" content="main">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
+
+    <link rel="stylesheet" href="${resource(dir:'css',file:'livestream.css')}" />
 </head>
 
 <body>
-  <article>
-    <section class="experiment">
-      <div class="make-center">
-        <input type="text" id="room-id" value="abcdef">
-        <button id="open-room">Start</button>
-        <button id="join-room">Join</button>
-        <button id="open-or-join-room">Auto Start or Join</button>
+  <div class="content">
+    <div class="livestream-title">
+      <div class="livestream-artist">EXAMPLE ARTIST</div>
+      <div class="livestream-venue">LIVE<div style="color: red;display: inline-block;">AT</div>EXAMPLE VENUE</div>
+    </div>
 
-        <div id="room-urls" style="text-align: center;display: none;margin: 15px -10px;border: 1px solid rgba(189, 189, 189, 0.5);"></div>
-      </div>
 
-      <div id="videos-container"></div>
-    </section>
+    <input type="text" id="room-id" value="abcdef">
+    <button id="open-room">Start</button>
+    <button id="join-room">Join</button>
+    <button id="open-or-join-room">Auto Start or Join</button>
+
+    
+    <!-- LIVESTREAM WINDOW -->
+    <div id="videos-container"></div>
+
+    <!-- ROOM URL -->
+    <div id="room-urls" style="display: none;"></div>
+  </div>
 
     
     <script src="${resource(dir:'js/livestream', file:'RTCMultiConnection.js')}" type="text/javascript"></script>
     <script src="${resource(dir:'js/livestream', file:'socket.io.js')}" type="text/javascript"></script>
-
-    <!--
-    <script src="${resource(dir:'js/livestream', file:'livestream.js')}" type="text/javascript"></script>
-    -->
 
     <script>
       // UI Code
@@ -173,10 +176,5 @@
         disableInputButtons();
       }
     </script>
-
-
-    <script src="https://cdn.webrtc-experiment.com/commits.js" async></script>
-
-  </article>
 </body>
 </html>
