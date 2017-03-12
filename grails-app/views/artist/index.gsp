@@ -8,66 +8,74 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 
 	    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
-
+	    <link rel="stylesheet" href="${resource(dir:'css',file:'post-page.css')}" />
+	    <rateable:resources/>
 	</head>
+
 	<body>
-		<a href="#list-artist" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="list-artist" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-				<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<table>
-			<thead>
-					<tr>
-					
-						<g:sortableColumn property="artistName" title="${message(code: 'artist.artistName.label', default: 'Artist Name')}" />
-					
-						<g:sortableColumn property="artistGenre" title="${message(code: 'artist.artistGenre.label', default: 'Artist Genre')}" />
-					
-						<g:sortableColumn property="artistDescription" title="${message(code: 'artist.artistDescription.label', default: 'Artist Description')}" />
-					
-						<g:sortableColumn property="artistNationality" title="${message(code: 'artist.artistNationality.label', default: 'Artist Nationality')}" />
-					
-					</tr>
-				</thead>
-				<tbody>
-				<g:each in="${artistInstanceList}" status="i" var="artistInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${artistInstance.id}">${fieldValue(bean: artistInstance, field: "artistName")}</g:link></td>
-					
-						<td>${fieldValue(bean: artistInstance, field: "artistGenre")}</td>
-					
-						<td>${fieldValue(bean: artistInstance, field: "artistDescription")}</td>
-					
-						<td>${fieldValue(bean: artistInstance, field: "artistNationality")}</td>
-					
-					</tr>
-				</g:each>
-				</tbody>
-			</table>
-			<div class="pagination">
-				<g:paginate total="${artistInstanceCount ?: 0}" />
+
+	<div class="content">
+
+		<!-- UPLOADED CONTENT -->
+		<div class="col-md-12">
+			<div class="content-banner">
+
 			</div>
 		</div>
 
+		<div class="col-md-9">
+			<div class="livestream-title">
+		      <div class="livestream-artist">EXAMPLE ARTIST</div>
+		      <div class="livestream-venue">LIVE<div style="color: red;display: inline-block;">AT</div>EXAMPLE VENUE</div>
+		    </div>
 
-		 <form action="http://s3.amazonaws.com/fyp-subsurface" method="post" enctype="multipart/form-data">
-			<input type="text" name="key" value="testfile.txt" />
-			<input type="text" name="acl" value="public-read" />
-			<input type="text" name="content-type" value="text/plain" />
-			<input type="hidden" name="AWSAccessKeyId" value="AKIAJT3UEF4EX5NSCN4A" />
-			<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMDktMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJmeXAtc3Vic3VyZmFjZSIgfSwKICAgIHsiYWNsIjogInB1YmxpYy1yZWFkIiB9LAogICAgWyJlcSIsICIka2V5IiwgInRlc3RmaWxlLnR4dCJdLAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgInRleHQvIl0sCiAgXQp9Cg==" />
-			<input type="hidden" name="signature" value="aGBe9LoxV0L4/yrnRpljNX1XSps=" />
-			<input name="file" type="file" />
-			<input name="submit" value="Upload" type="submit" />
-			</form>
+		    <!-- RATE -->
+
+
+			<!-- UPLOAD CONTENT -->
+			<div class="upload-content">
+				 <form action="http://s3.amazonaws.com/fyp-subsurface" method="post" enctype="multipart/form-data">
+					<input type="text" name="key" value="testfile.txt" />
+					<input type="text" name="acl" value="public-read" />
+					<input type="text" name="content-type" value="text/plain" />
+					<input type="hidden" name="AWSAccessKeyId" value="AKIAJT3UEF4EX5NSCN4A" />
+					<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMDktMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJmeXAtc3Vic3VyZmFjZSIgfSwKICAgIHsiYWNsIjogInB1YmxpYy1yZWFkIiB9LAogICAgWyJlcSIsICIka2V5IiwgInRlc3RmaWxlLnR4dCJdLAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgInRleHQvIl0sCiAgXQp9Cg==" />
+					<input type="hidden" name="signature" value="aGBe9LoxV0L4/yrnRpljNX1XSps=" />
+					<input name="file" type="file" />
+					<input name="submit" value="Upload" type="submit" />
+				</form>
+			</div>
+
+			<!-- COMMENT -->
+			<comments:each bean="${artist}">
+    			 ${comment.body} - Posted by ${comment.poster}
+			</comments:each>
+		</div>
+
+
+
+		<!-- SETLIST -->
+		<div class="col-md-3">
+			<div class="setlist-section">
+				<form action="" id="add-track-form">
+			      <fieldset>
+			        <input type="text" class="song-title form-inputs" id="title" name="song-title" placeholder="Song Title" required>
+			        <input type="text" class="song-key form-inputs" id="key" name="song-key" placeholder="Key" pattern="[A-Ga-g#♮]+">
+			        <input type="number" min="1" max="350" class="song-tempo form-inputs" id="tempo" name="song-tempo" placeholder="BPM" >
+			      </fieldset>
+			      <button class="add-track-button" type="submit" form="add-track-form">Add</button>
+			    </form>
+
+			    <div class="setlist" id="sortable-setlist">
+			    </div>
+		    </div>
+		</div>
+
+	</div>
+
+
+	<script src="https://rubaxa.github.io/Sortable/Sortable.js"></script>
+	<script src="${resource(dir:'js/post-page', file:'setlist.js')}" type="text/javascript"></script>
+	<script src="${resource(dir:'js/post-page', file:'main.js')}" type="text/javascript"></script>
 	</body>
 </html>

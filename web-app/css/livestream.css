@@ -22,16 +22,16 @@ button,input,select {
     padding: 0px 27px;
 }
 
-.livestream-title{
+.event-title{
     line-height: 40px;
 }
 
-.livestream-artist{
+.event-artist{
     font-size: 60px;
     color: white;
 }
 
-.livestream-venue{
+.event-venue{
     font-size: 40px;
     display: inline-block;
     color: white;

@@ -1,6 +1,9 @@
 package fyp
 
-class Artist {
+import org.grails.comments.*
+import org.grails.rateable.*
+
+class Artist implements Rateable, Commentable {
 
 	Long id
 	String artistName

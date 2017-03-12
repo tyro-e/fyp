@@ -11,9 +11,9 @@
 
 <body>
   <div class="content">
-    <div class="livestream-title">
-      <div class="livestream-artist">EXAMPLE ARTIST</div>
-      <div class="livestream-venue">LIVE<div style="color: red;display: inline-block;">AT</div>EXAMPLE VENUE</div>
+    <div class="event-title">
+      <div class="event-artist">EXAMPLE ARTIST</div>
+      <div class="event-venue">LIVE<div style="color: red;display: inline-block;">AT</div>EXAMPLE VENUE</div>
     </div>
 
 
