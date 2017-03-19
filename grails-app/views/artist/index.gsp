@@ -30,7 +30,8 @@
 		    </div>
 
 		    <!-- RATE -->
-
+		    
+		    
 
 			<!-- UPLOAD CONTENT -->
 			<div class="upload-content">
@@ -78,4 +79,11 @@
 	<script src="${resource(dir:'js/post-page', file:'setlist.js')}" type="text/javascript"></script>
 	<script src="${resource(dir:'js/post-page', file:'main.js')}" type="text/javascript"></script>
 	</body>
+
+	<script type="text/javascript">
+		def user = User.get(1)
+def v = Vehicle.get(1)
+v.addComment(user, "I prefer red cars")
+ .addComment(user, "I prefer sporty cars")
+	</script>
 </html>
