@@ -18,9 +18,19 @@ class Event implements Rateable, Commentable  {
 
 	
 
-    static constraints = {
+    static constraints = 
+    {
     	bandsintown_id unique:true
+    }
 
-    	
+
+
+    Double getAvgRating() {
+        // Dynamic call to method added by Rateable plugin.
+        return averageRating
+    }
+
+    Integer getRatingCount() {
+        return totalRatings
     }
 }

@@ -85,8 +85,10 @@ grails.hibernate.cache.queries = false
 
 
 
-
-
+// RATEABLE PLUGIN
+grails.rateable.rater.evaluator = {
+  grailsApplication.mainContext.springSecurityService.currentUser
+}
 
 
 

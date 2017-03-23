@@ -1,4 +1,3 @@
-
 <%@ page import="fyp.Event" %>
 <!DOCTYPE html>
 <html>
@@ -6,6 +5,10 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'event.label', default: 'Event')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		
+		
+		<rateable:resources/>
+		
 	</head>
 	<body>
 		<a href="#show-event" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -67,6 +70,8 @@
 					
 				</li>
 				</g:if>
+
+				<rateable:ratings bean='${eventInstance}'/>
 			
 			</ol>
 			<g:form url="[resource:eventInstance, action:'delete']" method="DELETE">
