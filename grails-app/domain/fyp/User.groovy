@@ -11,7 +11,7 @@ class User implements Serializable {
 
 	transient springSecurityService
 
-	static hasMany = [events:Event]
+	//static hasMany = [events:Event]
 
 	String username
 	String password

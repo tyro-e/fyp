@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list event">
 			
+				<g:if test="${eventInstance?.bandsintown_id}">
+				<li class="fieldcontain">
+					<span id="bandsintown_id-label" class="property-label"><g:message code="event.bandsintown_id.label" default="Bandsintownid" /></span>
+					
+						<span class="property-value" aria-labelledby="bandsintown_id-label"><g:fieldValue bean="${eventInstance}" field="bandsintown_id"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${eventInstance?.artist}">
 				<li class="fieldcontain">
 					<span id="artist-label" class="property-label"><g:message code="event.artist.label" default="Artist" /></span>
@@ -32,13 +41,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${eventInstance?.artists}">
+				<g:if test="${eventInstance?.ticketStatus}">
 				<li class="fieldcontain">
-					<span id="artists-label" class="property-label"><g:message code="event.artists.label" default="Artists" /></span>
+					<span id="ticketStatus-label" class="property-label"><g:message code="event.ticketStatus.label" default="Ticket Status" /></span>
 					
-						<g:each in="${eventInstance.artists}" var="a">
-						<span class="property-value" aria-labelledby="artists-label"><g:link controller="artist" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
-						</g:each>
+						<span class="property-value" aria-labelledby="ticketStatus-label"><g:fieldValue bean="${eventInstance}" field="ticketStatus"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${eventInstance?.ticket_url}">
+				<li class="fieldcontain">
+					<span id="ticket_url-label" class="property-label"><g:message code="event.ticket_url.label" default="Ticketurl" /></span>
+					
+						<span class="property-value" aria-labelledby="ticket_url-label"><g:fieldValue bean="${eventInstance}" field="ticket_url"/></span>
 					
 				</li>
 				</g:if>

@@ -35,21 +35,24 @@ class EventController extends RestfulController
 
         JSONData.each {
 
-            def event = new Event(  //id: it.id,
+            def event = new Event(  
                                     bandsintown_id: it.id.toString(),
                                     artist: it.artists.name.toString(), 
                                     venue: it.venue.name.toString(),
                                     ticket_url: it.ticket_url.toString(),
-                                    ticketStatus: it.ticket_status.toString(),
-                                    eventTime: it.datetime.toString(),
-                                    longitude: it.longitude.toString(),
-                                    latitude: it.latitude.toString())
+                                    ticketStatus: it.ticket_status.toString())
+                                    //longitude: it.longitude.toString(),
+                                    //latitude: it.latitude.toString())
+                                    //eventTime: it.datetime.toString()
+                                    
 
             if (!event.save()) {
                 event.errors.allErrors.each {
                     println it
                 }
-            } else {
+            } 
+
+            else {
                 numberEvents++
             }
         }

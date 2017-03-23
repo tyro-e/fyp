@@ -1,27 +1,26 @@
 package fyp
 
-class Event {
+import org.grails.comments.*
+import org.grails.rateable.*
 
-	//int id
+class Event implements Rateable, Commentable  {
+
+
 	int bandsintown_id
 	String artist
-
 	String venue
-	boolean ticketStatus
-	Date eventTime
 	String ticket_url
+	String ticketStatus
 
-	Double longitude
-	Double latitude
+	//Date eventTime
+	//int longitude
+	//int latitude
 
 	
-	
-	/*
-	static hasMany = [artists:Artist]
-	static belongsTo = Artist
-	*/
 
     static constraints = {
     	bandsintown_id unique:true
+
+    	
     }
 }
