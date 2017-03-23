@@ -5,6 +5,7 @@ import org.grails.rateable.*
 
 class Artist implements Rateable, Commentable {
 
+	/*
 	Long id
 	String artistName
 	String artistGenre
@@ -19,4 +20,5 @@ class Artist implements Rateable, Commentable {
     	artistDescription nullable: true
     	artistNationality nullable: true
     }
+    */
 }

@@ -1,4 +1,3 @@
-
 <%@ page import="fyp.Event" %>
 <!DOCTYPE html>
 <html>
@@ -24,11 +23,9 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="livestream" title="${message(code: 'event.livestream.label', default: 'Livestream')}" />
+						<g:sortableColumn property="artist" title="${message(code: 'event.artist.label', default: 'Artist')}" />
 					
-						<g:sortableColumn property="eventTime" title="${message(code: 'event.eventTime.label', default: 'Event Time')}" />
-					
-						<g:sortableColumn property="price" title="${message(code: 'event.price.label', default: 'Price')}" />
+						<g:sortableColumn property="venue" title="${message(code: 'event.venue.label', default: 'Venue')}" />
 					
 					</tr>
 				</thead>
@@ -36,11 +33,9 @@
 				<g:each in="${eventInstanceList}" status="i" var="eventInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${eventInstance.id}">${fieldValue(bean: eventInstance, field: "livestream")}</g:link></td>
+						<td><g:link action="show" id="${eventInstance.id}">${fieldValue(bean: eventInstance, field: "artist")}</g:link></td>
 					
-						<td><g:formatDate date="${eventInstance.eventTime}" /></td>
-					
-						<td>${fieldValue(bean: eventInstance, field: "price")}</td>
+						<td>${fieldValue(bean: eventInstance, field: "venue")}</td>
 					
 					</tr>
 				</g:each>

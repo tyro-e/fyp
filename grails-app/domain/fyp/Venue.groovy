@@ -2,6 +2,7 @@ package fyp
 
 class Venue {
 
+	/*
 	Long id
 	String venueName
 	String venueDescription
@@ -18,4 +19,5 @@ class Venue {
     	alcoholServed nullable:true
     	capacity nullable:true
     }
+    */
 }

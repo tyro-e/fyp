@@ -23,29 +23,11 @@
 			</g:if>
 			<ol class="property-list event">
 			
-				<g:if test="${eventInstance?.livestream}">
+				<g:if test="${eventInstance?.artist}">
 				<li class="fieldcontain">
-					<span id="livestream-label" class="property-label"><g:message code="event.livestream.label" default="Livestream" /></span>
+					<span id="artist-label" class="property-label"><g:message code="event.artist.label" default="Artist" /></span>
 					
-						<span class="property-value" aria-labelledby="livestream-label"><g:formatBoolean boolean="${eventInstance?.livestream}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${eventInstance?.eventTime}">
-				<li class="fieldcontain">
-					<span id="eventTime-label" class="property-label"><g:message code="event.eventTime.label" default="Event Time" /></span>
-					
-						<span class="property-value" aria-labelledby="eventTime-label"><g:formatDate date="${eventInstance?.eventTime}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${eventInstance?.price}">
-				<li class="fieldcontain">
-					<span id="price-label" class="property-label"><g:message code="event.price.label" default="Price" /></span>
-					
-						<span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${eventInstance}" field="price"/></span>
+						<span class="property-value" aria-labelledby="artist-label"><g:fieldValue bean="${eventInstance}" field="artist"/></span>
 					
 				</li>
 				</g:if>
@@ -57,6 +39,15 @@
 						<g:each in="${eventInstance.artists}" var="a">
 						<span class="property-value" aria-labelledby="artists-label"><g:link controller="artist" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
 						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${eventInstance?.venue}">
+				<li class="fieldcontain">
+					<span id="venue-label" class="property-label"><g:message code="event.venue.label" default="Venue" /></span>
+					
+						<span class="property-value" aria-labelledby="venue-label"><g:fieldValue bean="${eventInstance}" field="venue"/></span>
 					
 				</li>
 				</g:if>
