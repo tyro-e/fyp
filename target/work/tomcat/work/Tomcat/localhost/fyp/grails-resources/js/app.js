@@ -45,6 +45,7 @@ app.controller('BandsInTownController', function($scope, $http){
   function fetch(){ 
     console.log("fetch: " + $scope.search);
              
+    // set map to dublin         
     if($scope.search == "" || $scope.search == null){
       $.getJSON("http://api.bandsintown.com/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland", function(result) 
       {
@@ -658,7 +659,9 @@ app.controller('BandsInTownController', function($scope, $http){
 
     // put the selected show first in the array of shows
     $scope.details.unshift(band);
+    buildMap();
 
+    /*
     var artistName = $scope.details[0].artists[0].name;
 
     $.getJSON("http://api.bandsintown.com/artists/" + artistName + "/events/search.json?&api_version=2.0&app_id=FYP&location=Dublin,Ireland", function(result) 
@@ -670,7 +673,7 @@ app.controller('BandsInTownController', function($scope, $http){
           buildMap();
         }, 0);
       });   
-
+    */
   };
 
   $scope.select = function(){
