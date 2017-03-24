@@ -85,10 +85,28 @@ grails.hibernate.cache.queries = false
 
 
 
-// RATEABLE PLUGIN
+// RATEABLE
 grails.rateable.rater.evaluator = {
   grailsApplication.mainContext.springSecurityService.currentUser
 }
+
+// COMMENTABLE
+grails.commentable.poster.evaluator = {
+
+    def principal = org.springframework.security.core.context.SecurityContextHolder.context.authentication.principal
+
+    if (principal.hasProperty('id')) {
+
+        def currentUserId = principal.id
+
+        if (currentUserId) {
+            fyp.User.get(currentUserId)
+        }
+    }
+    
+}
+
+
 
 
 

@@ -72,6 +72,12 @@
 				</g:if>
 
 				<rateable:ratings bean='${eventInstance}'/>
+
+				<comments:each bean="${eventInstance}">
+				     ${comment.body} - Posted by ${comment.poster}
+				</comments:each>
+
+				<comments:render bean="${eventInstance}" />
 			
 			</ol>
 			<g:form url="[resource:eventInstance, action:'delete']" method="DELETE">

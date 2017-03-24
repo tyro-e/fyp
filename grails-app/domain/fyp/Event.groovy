@@ -24,6 +24,9 @@ class Event implements Rateable, Commentable  {
     }
 
 
+    def onAddComment = { comment ->
+        // post processing logic for newly added comment
+    }
 
     Double getAvgRating() {
         // Dynamic call to method added by Rateable plugin.
