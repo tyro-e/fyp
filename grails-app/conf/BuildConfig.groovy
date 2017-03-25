@@ -75,6 +75,9 @@ grails.project.dependency.resolution = {
         compile "org.grails.plugins:commentable:0.8.1"
         compile "org.grails.plugins:rateable:0.7.1"
 
+        compile ":quartz:1.0-RC2"
+        compile "org.grails.plugins:amazon-s3:0.8.2"
+
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.6" // or ":hibernate4:4.1.11.6"

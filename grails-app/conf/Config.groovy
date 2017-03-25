@@ -63,6 +63,18 @@ grails {
         }
     }
 }
+
+grails {
+    resources {        
+        s3 {
+            accessKey = "AKIAJ5OATHW54K7V3KVA"
+            secretKey = "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"
+            domain = "s3.amazonaws.com"
+            bucketName = "fyp-subsurface"
+            region = 'eu-west-1'
+        }
+    }
+}
  
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration

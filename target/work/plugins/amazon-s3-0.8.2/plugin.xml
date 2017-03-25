@@ -1,0 +1,38 @@
+<plugin name='amazon-s3' version='0.8.2' grailsVersion='1.1 &gt; *'>
+  <author>Cantina Consulting, Refactor</author>
+  <authorEmail>info@cantinaconsulting.com, contact@refactor.com.au</authorEmail>
+  <title>Provides tools to host media assets on Amazon's Simple Storage Service (S3)</title>
+  <description>This plugin is written for the Groovy on Grails web application framework, and intends to make it relatively easy to host media files such as images, Flash, movies and audio all on the Amazon Web Services Simple Storage Service (S3).  The goals of this plugin are as follows:
+
+* Host and manage media assets on Amazon S3 for storage and performance advantages
+* Provide easy mechanisms to reference S3-hosted assets in Grails applications
+* Make most efficient and cost-effective use of S3 hosting resources
+
+To achieve these goals, the plugin provides services to manage static media assets for a Grails application.  For the first revision of the plugin, the focus is on managing user uploaded static content.  Later revisions will place a focus on providing tools to migrate existing static content in a site (such as items under the /images folder) into S3.
+
+This plugin uses the excellent JetS3t Toolkit (http://jets3t.s3.amazonaws.com/) to communicate with the Amazon S3 service.
+</description>
+  <documentation>http://www.grails.org/plugin/amazon-s3</documentation>
+  <resources>
+    <resource>Config</resource>
+    <resource>DataSource</resource>
+    <resource>UrlMappings</resource>
+    <resource>S3AssetController</resource>
+    <resource>org.grails.s3.S3Asset</resource>
+    <resource>org.grails.s3.S3AssetOption</resource>
+    <resource>org.grails.s3.S3SyncNewJob</resource>
+    <resource>org.grails.s3.S3SyncRemovedJob</resource>
+    <resource>org.grails.s3.S3AssetService</resource>
+    <resource>org.grails.s3.S3BucketService</resource>
+    <resource>org.grails.s3.S3ClientService</resource>
+    <resource>org.grails.s3.S3KeyService</resource>
+    <resource>S3AssetTagLib</resource>
+  </resources>
+  <dependencies>
+    <plugin name='quartz' version='0.4.1 &gt; *' />
+    <resolvers>
+      <resolver type='grailsPlugins' name='grailsPlugins' />
+    </resolvers>
+  </dependencies>
+  <behavior />
+</plugin>

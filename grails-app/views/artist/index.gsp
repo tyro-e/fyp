@@ -3,13 +3,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'artist.label', default: 'Artist')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 
 	    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
 	    <link rel="stylesheet" href="${resource(dir:'css',file:'post-page.css')}" />
-	    <rateable:resources/>
+
 	</head>
 
 	<body>
@@ -29,9 +30,9 @@
 		      <div class="livestream-venue">LIVE<div style="color: red;display: inline-block;">AT</div>EXAMPLE VENUE</div>
 		    </div>
 
-		    <!-- RATE -->
+	
 		    
-		    
+		    <form action="http://fyp-subsurface.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
 
 			<!-- UPLOAD CONTENT -->
 			<div class="upload-content">
@@ -47,10 +48,7 @@
 				</form>
 			</div>
 
-			<!-- COMMENT -->
-			<comments:each bean="${artist}">
-    			 ${comment.body} - Posted by ${comment.poster}
-			</comments:each>
+
 		</div>
 
 
@@ -77,13 +75,7 @@
 
 	<script src="https://rubaxa.github.io/Sortable/Sortable.js"></script>
 	<script src="${resource(dir:'js/post-page', file:'setlist.js')}" type="text/javascript"></script>
-	<script src="${resource(dir:'js/post-page', file:'main.js')}" type="text/javascript"></script>
+
 	</body>
 
-	<script type="text/javascript">
-		def user = User.get(1)
-def v = Vehicle.get(1)
-v.addComment(user, "I prefer red cars")
- .addComment(user, "I prefer sporty cars")
-	</script>
 </html>
