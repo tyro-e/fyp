@@ -31,22 +31,7 @@
 		    </div>
 
 	
-		    
-		    <form action="http://fyp-subsurface.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
 
-			<!-- UPLOAD CONTENT -->
-			<div class="upload-content">
-				 <form action="http://s3.amazonaws.com/fyp-subsurface" method="post" enctype="multipart/form-data">
-					<input type="text" name="key" value="testfile.txt" />
-					<input type="text" name="acl" value="public-read" />
-					<input type="text" name="content-type" value="text/plain" />
-					<input type="hidden" name="AWSAccessKeyId" value="AKIAJT3UEF4EX5NSCN4A" />
-					<input type="hidden" name="policy" value="ewogICJleHBpcmF0aW9uIjogIjIwMDktMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImJ1Y2tldCI6ICJmeXAtc3Vic3VyZmFjZSIgfSwKICAgIHsiYWNsIjogInB1YmxpYy1yZWFkIiB9LAogICAgWyJlcSIsICIka2V5IiwgInRlc3RmaWxlLnR4dCJdLAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgInRleHQvIl0sCiAgXQp9Cg==" />
-					<input type="hidden" name="signature" value="aGBe9LoxV0L4/yrnRpljNX1XSps=" />
-					<input name="file" type="file" />
-					<input name="submit" value="Upload" type="submit" />
-				</form>
-			</div>
 
 
 		</div>
