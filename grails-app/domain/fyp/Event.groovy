@@ -12,6 +12,8 @@ class Event implements Rateable, Commentable  {
 	String ticket_url
 	String ticketStatus
 
+    String livestream
+
 	//Date eventTime
 	//int longitude
 	//int latitude
@@ -21,6 +23,7 @@ class Event implements Rateable, Commentable  {
     static constraints = 
     {
     	bandsintown_id unique:true
+        livestream nullable:true
     }
 
 
