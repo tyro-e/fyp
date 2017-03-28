@@ -17,6 +17,8 @@
   <script src="${resource(dir:'js/plugins/jQuery', file:'jQuery-v3.1.1.js')}" type="text/javascript"></script>
   <script src="${resource(dir:'js/plugins/bootstrap', file:'bootstrap.js')}" type="text/javascript"></script>
 
+
+
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Bungee|Montserrat+Subrayada|Nunito|Poppins|Work+Sans" rel="stylesheet">
   <g:layoutHead />  
@@ -60,5 +62,9 @@
     </div>
 
   </div>
+  
+  <script src="${resource(dir:'js/livestream', file:'RTCMultiConnection.js')}" type="text/javascript"></script>
+  <script src="${resource(dir:'js/livestream', file:'socket.io.js')}" type="text/javascript"></script>
+  <script src="${resource(dir:'js/livestream', file:'livestream.js')}" type="text/javascript"></script>
 </body>
 </html>
