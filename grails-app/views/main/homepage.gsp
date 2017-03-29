@@ -66,8 +66,64 @@
       <!-- BEGIN PAGE CONTENT -->
       <div class="homepage-section2" id ="#scroll">
         <div class = "container row" style="width: 100%;margin-right: 0;margin-left: 0;padding-right: 0;padding-left: 0;">
+          
+
+
+
+
           <!-- ANGULARJS RENDER: -->
-          <div ng-view></div>
+          <div class="content" ng-controller="BandsInTownController" style="background-color: white" >
+            <div class="pure-g">
+
+              <!-- LEFT -->
+              <div id = "left-panel" class="col-md-3" style="overflow: hidden;">
+                <div class="event-details-section">
+                  <div class = "eventSectionTitle">UPCOMING</div>
+                  <input type="text" ng-model="search" ng-change="change()" onclick="select()" class="artist-search-field" placeholder="Search artist"/>
+                  
+                    <div class="form-group"> 
+                      <div id="datetimepicker3"></div>
+                    </div>
+
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker3').datetimepicker(
+                            {
+                                inline: true,
+                                format: "dd/M",
+                                minView: 'days',
+                                minViewMode: 'months',
+                                minView: 2,
+                                stepMonths: 0,
+                            });
+                        });
+                    </script>
+                </div>
+              </div>
+
+              <!-- CENTER -->
+              <div id="shows" class="col-md-6">
+                <div class="child" style="overflow-x: hidden;">
+                  <div id="related_results">
+                    <g:render template = "partials/shows"/>
+                  </div>
+                </div>  
+              </div>
+
+              <!-- RIGHT -->
+              <div id="main-info" class = "col-md-3" >
+                <g:render template = "partials/main-info" />
+              </div>
+
+              <!-- MAPS AS BACKGROUND -->
+              <div id="maps">  
+                <g:render template = "partials/maps" />
+              </div>
+
+            </div>
+          </div>
+
+
         </div>
       </div>
 
