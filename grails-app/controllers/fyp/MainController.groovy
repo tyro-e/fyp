@@ -4,11 +4,15 @@ import org.springframework.web.context.request.RequestContextHolder
 
 class MainController {
 
-    def homepage() 
-    { 
-
+    def homepage(Integer max) 
+    {
+        params.max = Math.min(max ?: 10, 100)
+        respond Event.list(params), model:[eventInstanceCount: Event.count()]
     }
+    
 }
+
+
 
 
 class MenuTagLib {
