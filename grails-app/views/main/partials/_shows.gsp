@@ -1,18 +1,15 @@
 <%@ page import="fyp.Event" %>
-
-
-
 <div ng-if="details.Response!=='False' && details != 'empty'">
   <div ng-if="details.length == 0">No shows for {{ search }}</div>
 
 
   <ul class="rel-results">
-  <g:each in="${eventInstanceList}" status="i" var="eventInstance">
-    <li ng-repeat="show in details">
     
-      <div class = "event-date-time">
-        {{ show.datetime }}
-      </div>
+
+    <li ng-repeat="show in details | unique:'show.ticket_url'">
+      <g:each in="${eventInstanceList}" status="i" var="eventInstance">
+      
+      <div class = "event-date-time">{{ show.datetime }}</div>
 
       <div class = "event-item">  
         <div class = "nameAndTicket row"  style="margin-left: 0;margin-right: 0">
@@ -32,11 +29,10 @@
         </div>
 
         
-          <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-            <td><g:link action="show" controller = "Event" id="${eventInstance.id}">Info</g:link></td>
-            </tr>
+          
+        <g:link action="show" controller = "Event" id="${eventInstance.id}">Info</g:link>
+          
         
-
         <div class="venueAndRSVP row" style="margin-left: 0;margin-right: 0">
           <span class="venue-name col-md-10">
             <a href="#/" id="{{ $index + 1 }}" ng-click="update(show)" class = "venue-item">           
@@ -53,8 +49,9 @@
           </span>
         </div>
       </div>
-
+      
+      </g:each>
     </li>
-    </g:each>
+    
   </ul>
 </div>

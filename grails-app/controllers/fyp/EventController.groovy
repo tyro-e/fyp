@@ -67,10 +67,36 @@ class EventController extends RestfulController
     static scaffold = true
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index(Integer max) {
+    /*
+    def index(Integer max) 
+    {
         params.max = Math.min(max ?: 10, 100)
         respond Event.list(params), model:[eventInstanceCount: Event.count()]
     }
+    */
+
+
+    def index() 
+    {
+        int eventCount = Event.count()
+        int startingPoint = eventCount - 50
+
+        def events = Event.createCriteria().list
+        {
+            order('id')
+            firstResult(startingPoint)
+            maxResults(50)
+        }
+
+        respond events
+    }
+
+
+
+
+
+
+
 
     def show(Event eventInstance) {
         respond eventInstance

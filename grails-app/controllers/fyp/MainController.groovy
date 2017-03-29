@@ -2,20 +2,29 @@ package fyp
 import org.springframework.web.context.request.RequestContextHolder
 
 
-class MainController {
-
-    def homepage(Integer max) 
+class MainController 
+{
+    def homepage() 
     {
-        params.max = Math.min(max ?: 10, 100)
-        respond Event.list(params), model:[eventInstanceCount: Event.count()]
+        int eventCount = Event.count()
+        int startingPoint = eventCount - 50
+
+        def events = Event.createCriteria().list
+        {
+            order('id')
+            firstResult(startingPoint)
+            maxResults(50)
+        }
+
+        respond events
     }
-    
 }
 
 
 
 
-class MenuTagLib {
+class MenuTagLib 
+{
     static namespace = 'html'
 
   	def render = {attrs ->
