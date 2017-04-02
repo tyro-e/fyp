@@ -140,6 +140,8 @@
 <script src="${resource(dir:'js/plugins', file:'fullcalendar.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js', file:'homepage.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js', file:'app.js')}" type="text/javascript"></script>
+<script src="${resource(dir:'js', file:'filter.js')}" type="text/javascript"></script>
+
 
 <!-- GOOGLE MAPS API -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
