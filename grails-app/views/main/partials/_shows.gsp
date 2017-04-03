@@ -5,10 +5,9 @@
 
   <ul class="rel-results">
     
-  <g:each in="${eventInstanceList}" status="i" var="eventInstance">
-    <li ng-repeat="show in details">
-
-      
+ 
+    <li ng-repeat="show in details | unique:'venue.name'">
+     <g:each in="${eventInstanceList}" status="i" var="eventInstance">
 
         <g:link action="show" controller = "Event" id="${eventInstance.id}">Info</g:link>
       
@@ -47,10 +46,9 @@
             </span>
           </div>
         </div>
-        
-      
 
+        </g:each>
     </li>
-    </g:each>
+   
   </ul>
 </div>

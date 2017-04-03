@@ -40,7 +40,6 @@ app.controller('BandsInTownController', function($scope, $http){
     var dateConverted = newDate.toDateString();
     date = dateConverted;
 
-
     console.log(dateConverted);
   }
 
@@ -684,3 +683,24 @@ app.controller('BandsInTownController', function($scope, $http){
   }
 });
 
+app.filter('unique', function() 
+  {
+    console.log("RUNNING LAST?")
+
+    return function($scope, keyname) 
+      {
+        var output = [], keys = [];
+
+          angular.forEach($scope, function(item)
+          {
+            var key = item[keyname];
+            if(keys.indexOf(key) === -1) 
+            {
+                keys.push(key);
+                output.push(item);
+              }
+          });
+
+        return output;
+      };
+  });

@@ -14,11 +14,9 @@ class EventController extends RestfulController
 {
     //static responseFormats = ['json', 'xml']
 
-    
     EventController() {
         super(Event)
     }
-
 
     def populate() {
 
@@ -35,17 +33,17 @@ class EventController extends RestfulController
 
         JSONData.each {
 
+            String artistName1 = it.artists.name.toString();
+            String artistName2 = artistName1.replace("[","").replace("]","");
+
             def event = new Event(  
                                     bandsintown_id: it.id.toString(),
-                                    artist: it.artists.name.toString(), 
+                                    artist: artistName2, 
                                     venue: it.venue.name.toString(),
                                     ticket_url: it.ticket_url.toString(),
-                                    ticketStatus: it.ticket_status.toString())
-                                    //longitude: it.longitude.toString(),
-                                    //latitude: it.latitude.toString())
-                                    //eventTime: it.datetime.toString()
+                                    ticketStatus: it.ticket_status.toString(),
+                                    eventTime: it.datetime.toString())
                                     
-
             if (!event.save()) {
                 event.errors.allErrors.each {
                     println it
@@ -59,10 +57,6 @@ class EventController extends RestfulController
 
         render "${numberEvents} events loaded"
     }
-
-
-
-
 
     static scaffold = true
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -90,12 +84,6 @@ class EventController extends RestfulController
 
         respond events
     }
-
-
-
-
-
-
 
 
     def show(Event eventInstance) {

@@ -15,8 +15,7 @@ class MainController
             firstResult(startingPoint)
             maxResults(50)
         }
-
-
+        
         respond events
     }
 }

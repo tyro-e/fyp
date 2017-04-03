@@ -11,10 +11,10 @@ class Event implements Rateable, Commentable  {
 	String venue
 	String ticket_url
 	String ticketStatus
+    String eventTime
 
     String livestream
 
-	//Date eventTime
 	//int longitude
 	//int latitude
 
