@@ -9,17 +9,28 @@
 		<link rel="stylesheet" href="${resource(dir:'css',file:'livestream.css')}" />
 
 		<rateable:resources/>
+		<style type="text/css">
+			#search-form, .form-control {
+    margin-bottom: 20px;
+}
+.cover {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-size: cover;
+}
+.cover:hover {
+    cursor: pointer;
+}
+.cover.playing {
+    border: 5px solid #e45343;
+}
+		</style>
 		
 	</head>
 	<body>
 		<a href="#show-event" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
+
 		<div id="show-event" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
@@ -88,7 +99,7 @@
 
 
 			
-			
+			<!-- LIVESTREAM -->
   			<g:form name = "Start" url="[resource:eventInstance, action:'update']" method="PUT" >
   				<g:textField name="livestream" type="text" id="room-id" value="${eventInstance?.livestream}"/>
 				
@@ -97,20 +108,23 @@
     			</div>
     		</g:form>
 
-
-
-
 		    <button id="join-room">Join</button>
 		    <button id="open-or-join-room">Auto Start or Join</button>
-		    
-		    <!-- LIVESTREAM WINDOW -->
+		    <!-- stream window -->
 		    <div id="videos-container"></div>
-
-		    <!-- ROOM URL -->
+		    <!-- room url -->
 		    <div id="room-urls" style="display: none;"></div>
 
 
-
+		    <!-- SPOTIFY -->
+		    <div class="container">
+			    <div id="results"></div>
+			</div>
+			<script id="results-template" type="text/x-handlebars-template">
+			    {{#each albums.items}}
+			    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+			    {{/each}}
+			</script>
 
 
 			<g:form url="[resource:eventInstance, action:'delete']" method="DELETE">
@@ -122,7 +136,9 @@
 		</div>
 	
 
-	  
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="${resource(dir:'js', file:'spotify.js')}" type="text/javascript"></script>
+
+    
   </body>
 </html>
