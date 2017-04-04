@@ -26,7 +26,9 @@ $( 'a' ).each( function recordContents(){
 
 var app = angular.module('myApp')
 
-
+function filter()
+{
+	console.log("filtete");
 	app.filter('unique', function() 
 	{
 		console.log("RUNNING LAST?")
@@ -48,3 +50,5 @@ var app = angular.module('myApp')
 	      return output;
 	    };
 	});
+};
+

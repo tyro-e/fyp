@@ -40,7 +40,9 @@
 				<li class="fieldcontain">
 					<span id="artist-label" class="property-label"><g:message code="event.artist.label" default="Artist" /></span>
 					
-						<span class="property-value" aria-labelledby="artist-label"><g:fieldValue bean="${eventInstance}" field="artist"/></span>
+					<span class="property-value" id = "artistName" aria-labelledby="artist-label">
+						<g:fieldValue bean="${eventInstance}" field="artist"/>
+					</span>
 					
 				</li>
 				</g:if>
@@ -121,6 +123,6 @@
 	
 
 	  
-    
+    <script src="${resource(dir:'js', file:'spotify.js')}" type="text/javascript"></script>
   </body>
 </html>
