@@ -15,8 +15,7 @@ class Event implements Rateable, Commentable  {
     String eventTime
     String livestream
 
-	//int longitude
-	//int latitude
+
 
 	
 
@@ -24,6 +23,7 @@ class Event implements Rateable, Commentable  {
     {
     	bandsintown_id unique:true
         livestream nullable:true
+
     }
 
 

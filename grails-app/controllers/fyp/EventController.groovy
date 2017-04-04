@@ -43,6 +43,7 @@ class EventController extends RestfulController
                                     ticket_url: it.ticket_url.toString(),
                                     ticketStatus: it.ticket_status.toString(),
                                     eventTime: it.datetime.toString())
+
                                     
             if (!event.save()) {
                 event.errors.allErrors.each {
