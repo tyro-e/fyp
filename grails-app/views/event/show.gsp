@@ -10,21 +10,18 @@
 
 		<rateable:resources/>
 		<style type="text/css">
-			#search-form, .form-control {
-    margin-bottom: 20px;
-}
-.cover {
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-    background-size: cover;
-}
-.cover:hover {
-    cursor: pointer;
-}
-.cover.playing {
-    border: 5px solid #e45343;
-}
+		.cover {
+		    width: 300px;
+		    height: 300px;
+		    display: inline-block;
+		    background-size: cover;
+		}
+		.cover:hover {
+		    cursor: pointer;
+		}
+		.cover.playing {
+		    border: 5px solid #e45343;
+		}
 		</style>
 		
 	</head>
@@ -85,20 +82,26 @@
 				</li>
 				</g:if>
 
-				<rateable:ratings bean='${eventInstance}'/>
-
-				<comments:each bean="${eventInstance}">
-				     ${comment.body} - Posted by ${comment.poster}
-				</comments:each>
-
-				<comments:render bean="${eventInstance}" />
-			
+				<g:if test="${eventInstance?.eventTime}">
+				<li class="fieldcontain">
+					<span id="eventTime-label" class="property-label"><g:message code="event.eventTime.label" default="eventTime" /></span>
+					
+						<span class="property-value" aria-labelledby="eventTime-label"><g:fieldValue bean="${eventInstance}" field="eventTime"/></span>
+					
+				</li>
+				</g:if>
 			</ol>
 
 
 
 
 			
+			<!-- RATING -->
+			<rateable:ratings bean='${eventInstance}'/>
+
+			<!-- COMMENTING -->
+			<comments:render bean="${eventInstance}" />
+
 			<!-- LIVESTREAM -->
   			<g:form name = "Start" url="[resource:eventInstance, action:'update']" method="PUT" >
   				<g:textField name="livestream" type="text" id="room-id" value="${eventInstance?.livestream}"/>
@@ -135,10 +138,8 @@
 			</g:form>
 		</div>
 	
-
+	<!-- JAVASCRIPTS -->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="${resource(dir:'js', file:'spotify.js')}" type="text/javascript"></script>
-
-    
   </body>
 </html>

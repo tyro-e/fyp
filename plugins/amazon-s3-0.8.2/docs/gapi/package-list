@@ -1,9 +1,0 @@
-DefaultPackage
-grails-app.conf
-grails-app.controllers
-grails-app.domain.org.grails.s3
-grails-app.jobs.org.grails.s3
-grails-app.services.org.grails.s3
-grails-app.taglib
-src.groovy.org.grails.s3
-test.integration.org.grails.s3

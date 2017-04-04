@@ -2,6 +2,7 @@ package fyp
 
 import org.grails.comments.*
 import org.grails.rateable.*
+import com.amazonaws.services.s3.model.*
 
 class Event implements Rateable, Commentable  {
 
@@ -12,7 +13,6 @@ class Event implements Rateable, Commentable  {
 	String ticket_url
 	String ticketStatus
     String eventTime
-
     String livestream
 
 	//int longitude

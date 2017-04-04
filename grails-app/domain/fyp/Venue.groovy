@@ -20,4 +20,11 @@ class Venue {
     	capacity nullable:true
     }
     */
+
+    String name
+    String uploadFeaturedImage
+
+    static constraints = {
+    	uploadFeaturedImage nullable:true
+    }
 }

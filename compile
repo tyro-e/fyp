@@ -317,6 +317,27 @@
     <dependency group='org.grails.plugins' name='svn' version='1.0.0.M1'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\svn\zips\svn-1.0.0.M1.zip</jar>
     </dependency>
+    <dependency group='org.grails.plugins' name='ajax-uploader' version='1.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\ajax-uploader\zips\ajax-uploader-1.1.zip</jar>
+    </dependency>
+    <dependency group='org.grails.plugins' name='aws-sdk' version='1.4.7'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\aws-sdk\zips\aws-sdk-1.4.7.zip</jar>
+    </dependency>
+    <dependency group='com.amazonaws' name='aws-java-sdk' version='1.4.7'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.4.7.jar</jar>
+    </dependency>
+    <dependency group='org.apache.httpcomponents' name='httpclient' version='4.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.1.jar</jar>
+    </dependency>
+    <dependency group='org.apache.httpcomponents' name='httpcore' version='4.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.1.jar</jar>
+    </dependency>
+    <dependency group='org.codehaus.jackson' name='jackson-core-asl' version='1.8.9'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.8.9.jar</jar>
+    </dependency>
+    <dependency group='org.codehaus.jackson' name='jackson-mapper-asl' version='1.8.9'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.8.9.jar</jar>
+    </dependency>
     <dependency group='org.grails.plugins' name='quartz' version='1.0-RC2'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\quartz\zips\quartz-1.0-RC2.zip</jar>
     </dependency>
@@ -337,9 +358,6 @@
     </dependency>
     <dependency group='org.quartz-scheduler' name='quartz' version='1.8.4'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.quartz-scheduler\quartz\jars\quartz-1.8.4.jar</jar>
-    </dependency>
-    <dependency group='org.grails.plugins' name='amazon-s3' version='0.8.2'>
-      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\amazon-s3\zips\amazon-s3-0.8.2.zip</jar>
     </dependency>
     <dependency group='org.grails.plugins' name='spring-security-core' version='2.0.0'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\spring-security-core\zips\spring-security-core-2.0.0.zip</jar>
@@ -601,6 +619,27 @@
     <dependency group='org.grails.plugins' name='svn' version='1.0.0.M1'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\svn\zips\svn-1.0.0.M1.zip</jar>
     </dependency>
+    <dependency group='org.grails.plugins' name='ajax-uploader' version='1.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\ajax-uploader\zips\ajax-uploader-1.1.zip</jar>
+    </dependency>
+    <dependency group='org.grails.plugins' name='aws-sdk' version='1.4.7'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\aws-sdk\zips\aws-sdk-1.4.7.zip</jar>
+    </dependency>
+    <dependency group='com.amazonaws' name='aws-java-sdk' version='1.4.7'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.4.7.jar</jar>
+    </dependency>
+    <dependency group='org.apache.httpcomponents' name='httpclient' version='4.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.1.jar</jar>
+    </dependency>
+    <dependency group='org.apache.httpcomponents' name='httpcore' version='4.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.1.jar</jar>
+    </dependency>
+    <dependency group='org.codehaus.jackson' name='jackson-core-asl' version='1.8.9'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.8.9.jar</jar>
+    </dependency>
+    <dependency group='org.codehaus.jackson' name='jackson-mapper-asl' version='1.8.9'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.8.9.jar</jar>
+    </dependency>
     <dependency group='org.grails.plugins' name='quartz' version='1.0-RC2'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\quartz\zips\quartz-1.0-RC2.zip</jar>
     </dependency>
@@ -618,9 +657,6 @@
     </dependency>
     <dependency group='org.quartz-scheduler' name='quartz' version='1.8.4'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.quartz-scheduler\quartz\jars\quartz-1.8.4.jar</jar>
-    </dependency>
-    <dependency group='org.grails.plugins' name='amazon-s3' version='0.8.2'>
-      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\amazon-s3\zips\amazon-s3-0.8.2.zip</jar>
     </dependency>
     <dependency group='org.grails.plugins' name='spring-security-core' version='2.0.0'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\spring-security-core\zips\spring-security-core-2.0.0.zip</jar>
@@ -651,12 +687,6 @@
     </dependency>
     <dependency group='org.codehaus.groovy.modules.http-builder' name='http-builder' version='0.5.1'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.codehaus.groovy.modules.http-builder\http-builder\jars\http-builder-0.5.1.jar</jar>
-    </dependency>
-    <dependency group='org.apache.httpcomponents' name='httpclient' version='4.0.3'>
-      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.3.jar</jar>
-    </dependency>
-    <dependency group='org.apache.httpcomponents' name='httpcore' version='4.0.1'>
-      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar</jar>
     </dependency>
     <dependency group='net.sf.json-lib' name='json-lib' version='2.3'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\net.sf.json-lib\json-lib\jars\json-lib-2.3-jdk15.jar</jar>
@@ -996,6 +1026,27 @@
     <dependency group='org.grails.plugins' name='svn' version='1.0.0.M1'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\svn\zips\svn-1.0.0.M1.zip</jar>
     </dependency>
+    <dependency group='org.grails.plugins' name='ajax-uploader' version='1.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\ajax-uploader\zips\ajax-uploader-1.1.zip</jar>
+    </dependency>
+    <dependency group='org.grails.plugins' name='aws-sdk' version='1.4.7'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\aws-sdk\zips\aws-sdk-1.4.7.zip</jar>
+    </dependency>
+    <dependency group='com.amazonaws' name='aws-java-sdk' version='1.4.7'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.4.7.jar</jar>
+    </dependency>
+    <dependency group='org.apache.httpcomponents' name='httpclient' version='4.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.1.jar</jar>
+    </dependency>
+    <dependency group='org.apache.httpcomponents' name='httpcore' version='4.1'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.1.jar</jar>
+    </dependency>
+    <dependency group='org.codehaus.jackson' name='jackson-core-asl' version='1.8.9'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.8.9.jar</jar>
+    </dependency>
+    <dependency group='org.codehaus.jackson' name='jackson-mapper-asl' version='1.8.9'>
+      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.8.9.jar</jar>
+    </dependency>
     <dependency group='org.grails.plugins' name='quartz' version='1.0-RC2'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\quartz\zips\quartz-1.0-RC2.zip</jar>
     </dependency>
@@ -1013,9 +1064,6 @@
     </dependency>
     <dependency group='org.quartz-scheduler' name='quartz' version='1.8.4'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.quartz-scheduler\quartz\jars\quartz-1.8.4.jar</jar>
-    </dependency>
-    <dependency group='org.grails.plugins' name='amazon-s3' version='0.8.2'>
-      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\amazon-s3\zips\amazon-s3-0.8.2.zip</jar>
     </dependency>
     <dependency group='org.grails.plugins' name='spring-security-core' version='2.0.0'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.grails.plugins\spring-security-core\zips\spring-security-core-2.0.0.zip</jar>
@@ -1046,12 +1094,6 @@
     </dependency>
     <dependency group='org.codehaus.groovy.modules.http-builder' name='http-builder' version='0.5.1'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\org.codehaus.groovy.modules.http-builder\http-builder\jars\http-builder-0.5.1.jar</jar>
-    </dependency>
-    <dependency group='org.apache.httpcomponents' name='httpclient' version='4.0.3'>
-      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.3.jar</jar>
-    </dependency>
-    <dependency group='org.apache.httpcomponents' name='httpcore' version='4.0.1'>
-      <jar>D:\Users\Tyrone\.grails\ivy-cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar</jar>
     </dependency>
     <dependency group='net.sf.json-lib' name='json-lib' version='2.3'>
       <jar>D:\Users\Tyrone\.grails\ivy-cache\net.sf.json-lib\json-lib\jars\json-lib-2.3-jdk15.jar</jar>

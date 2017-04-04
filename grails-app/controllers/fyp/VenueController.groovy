@@ -8,7 +8,6 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class VenueController {
 
-    static scaffold = true
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {

@@ -21,7 +21,6 @@ var searchAlbums = function (query) {
             q: query,
             type: 'album',
             limit: '9'
-
         },
         success: function (response) {
             resultsPlaceholder.innerHTML = template(response);

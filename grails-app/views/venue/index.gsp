@@ -24,15 +24,9 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="venueName" title="${message(code: 'venue.venueName.label', default: 'Venue Name')}" />
+						<g:sortableColumn property="uploadFeaturedImage" title="${message(code: 'venue.uploadFeaturedImage.label', default: 'Upload Featured Image')}" />
 					
-						<g:sortableColumn property="venueDescription" title="${message(code: 'venue.venueDescription.label', default: 'Venue Description')}" />
-					
-						<g:sortableColumn property="venueAddress" title="${message(code: 'venue.venueAddress.label', default: 'Venue Address')}" />
-					
-						<g:sortableColumn property="alcoholServed" title="${message(code: 'venue.alcoholServed.label', default: 'Alcohol Served')}" />
-					
-						<g:sortableColumn property="capacity" title="${message(code: 'venue.capacity.label', default: 'Capacity')}" />
+						<g:sortableColumn property="name" title="${message(code: 'venue.name.label', default: 'Name')}" />
 					
 					</tr>
 				</thead>
@@ -40,15 +34,9 @@
 				<g:each in="${venueInstanceList}" status="i" var="venueInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${venueInstance.id}">${fieldValue(bean: venueInstance, field: "venueName")}</g:link></td>
+						<td><g:link action="show" id="${venueInstance.id}">${fieldValue(bean: venueInstance, field: "uploadFeaturedImage")}</g:link></td>
 					
-						<td>${fieldValue(bean: venueInstance, field: "venueDescription")}</td>
-					
-						<td>${fieldValue(bean: venueInstance, field: "venueAddress")}</td>
-					
-						<td><g:formatBoolean boolean="${venueInstance.alcoholServed}" /></td>
-					
-						<td>${fieldValue(bean: venueInstance, field: "capacity")}</td>
+						<td>${fieldValue(bean: venueInstance, field: "name")}</td>
 					
 					</tr>
 				</g:each>

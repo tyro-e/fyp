@@ -64,6 +64,7 @@ grails {
     }
 }
 
+/*
 grails {
     resources {        
         s3 {
@@ -72,6 +73,23 @@ grails {
             domain = "s3.amazonaws.com"
             bucketName = "fyp-subsurface"
             region = 'eu-west-1'
+        }
+    }
+}
+*/
+
+grails {
+    plugin {
+        awssdk {
+            
+
+            s3 {
+                accessKey = {'AKIAJSQ7T7FL4RZKWPFQ'}    // Default access key
+                secretKey = {'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'}    // Default secret key
+                region = 'eu-west-1'        // Default region
+                domain = "s3.amazonaws.com"
+                bucketName = "fyp-subsurface"
+            }
         }
     }
 }
@@ -117,9 +135,6 @@ grails.commentable.poster.evaluator = {
     }
     
 }
-
-
-
 
 
 environments {
