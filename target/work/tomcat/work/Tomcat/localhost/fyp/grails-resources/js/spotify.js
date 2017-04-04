@@ -19,7 +19,9 @@ var searchAlbums = function (query) {
         url: 'https://api.spotify.com/v1/search',
         data: {
             q: query,
-            type: 'album'
+            type: 'album',
+            limit: '9'
+
         },
         success: function (response) {
             resultsPlaceholder.innerHTML = template(response);
