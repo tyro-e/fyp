@@ -19,8 +19,6 @@
   <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script> 
   <script src="${resource(dir:'js', file:'filter.js')}" type="text/javascript"></script>
 
-
-  
 </head>
 
 <body>
@@ -110,6 +108,7 @@
                     <div ng-if="details.length == 0">No shows for {{ search }}</div>
                     <ul class="rel-results">
                       <li ng-repeat="show in details">
+
                           <div id="eventTimeConv"></div>
                           <div class = "event-date-time">{{ show.datetime }}</div>
 
