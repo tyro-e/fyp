@@ -79,6 +79,8 @@ grails.project.dependency.resolution =
         compile ":aws-sdk:1.4.7"
         compile ":quartz:1.0-RC2"
 
+        
+
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.6" // or ":hibernate4:4.1.11.6"
         runtime ":database-migration:1.3.8"

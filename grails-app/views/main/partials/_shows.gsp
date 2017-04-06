@@ -1,3 +1,4 @@
+<!--
 <%@ page import="fyp.Event" %>
 <div ng-if="details.Response!=='False' && details != 'empty'">
   <div ng-if="details.length == 0">No shows for {{ search }}</div>
@@ -6,10 +7,9 @@
   <ul class="rel-results">
     
  
-    <li ng-repeat="show in details | unique:'venue.name'">
-     <g:each in="${eventInstanceList}" status="i" var="eventInstance">
+    <li ng-repeat="show in details">
 
-        <g:link action="show" controller = "Event" id="${eventInstance.id}">Info</g:link>
+        <g:link action="show" controller = "Event" id="${Event.findByTicketUrl( show.ticket_url )?.id}">Info</g:link>
       
         <div class = "event-date-time">{{ show.datetime }}</div>
 
@@ -47,7 +47,6 @@
           </div>
         </div>
 
-        </g:each>
     </li>
    
   </ul>

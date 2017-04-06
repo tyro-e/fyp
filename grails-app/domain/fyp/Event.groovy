@@ -10,20 +10,19 @@ class Event implements Rateable, Commentable  {
 	int bandsintown_id
 	String artist
 	String venue
-	String ticket_url
+	String ticketUrl
 	String ticketStatus
     String eventTime
     String livestream
 
-
-
-	
-
-    static constraints = 
-    {
-    	bandsintown_id unique:true
+    static constraints = {
+        bandsintown_id unique:true
         livestream nullable:true
 
+    }
+
+    static mapping = { 
+        ticketUrl column: 'ticket_url' 
     }
 
 
@@ -39,4 +38,6 @@ class Event implements Rateable, Commentable  {
     Integer getRatingCount() {
         return totalRatings
     }
+
+
 }

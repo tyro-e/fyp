@@ -26,12 +26,12 @@
 	<g:textField name="ticketStatus" value="${eventInstance?.ticketStatus}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'ticket_url', 'error')} ">
-	<label for="ticket_url">
-		<g:message code="event.ticket_url.label" default="Ticketurl" />
+<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'ticketUrl', 'error')} ">
+	<label for="ticketUrl">
+		<g:message code="event.ticketUrl.label" default="Ticketurl" />
 		
 	</label>
-	<g:textField name="ticket_url" value="${eventInstance?.ticket_url}"/>
+	<g:textField name="ticketUrl" value="${eventInstance?.ticketUrl}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'venue', 'error')} ">

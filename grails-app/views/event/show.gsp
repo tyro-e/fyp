@@ -9,9 +9,7 @@
 		<rateable:resources/>
 	</head>
 	<body>
-		<div id="show-event" class="content scaffold-show col-md-8" role="main">
-
-			
+		<div id="show-event" class="col-md-8 content scaffold-show" role="main">	
 			<div class="event-title">
 				<!-- ARTIST -->
 				<div>
@@ -66,9 +64,9 @@
 			<div>
 				<a class = "ticketLink btn" id="ticket_url_append">BUY TICKETS</a>
 
-				<g:if test="${eventInstance?.ticket_url}">					
-					<span class="property-value ticketUrl" aria-labelledby="ticket_url-label" style="opacity: 0;font-size: 0;">
-						<g:fieldValue bean="${eventInstance}" field="ticket_url"/>
+				<g:if test="${eventInstance?.ticketUrl}">					
+					<span class="property-value ticketUrl" aria-labelledby="ticketUrl-label" style="opacity: 0;font-size: 0;">
+						<g:fieldValue bean="${eventInstance}" field="ticketUrl"/>
 					</span>
 				</g:if>				
 			</div>

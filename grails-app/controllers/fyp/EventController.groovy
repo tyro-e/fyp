@@ -40,7 +40,7 @@ class EventController extends RestfulController
                                     bandsintown_id: it.id.toString(),
                                     artist: artistName2, 
                                     venue: it.venue.name.toString(),
-                                    ticket_url: it.ticket_url.toString(),
+                                    ticketUrl: it.ticket_url.toString(),
                                     ticketStatus: it.ticket_status.toString(),
                                     eventTime: it.datetime.toString())
 

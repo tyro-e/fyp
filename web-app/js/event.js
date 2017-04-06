@@ -32,24 +32,43 @@ $( document ).ready(function()
 });
 
 function changeDate(){
-    var date = document.getElementById('eventTime').innerText;
-    console.log(date);
-    var newDate = new Date(date);
+    var eventDate = document.getElementById('eventTime').innerText;
+    console.log("event date json: " + eventDate);
+    var newDate = new Date(eventDate);
     var dateConverted = newDate.toDateString();
-    date = dateConverted;
-
-    console.log(dateConverted);
-
+    eventDate = dateConverted;
+    console.log("event date normal: " + dateConverted);
     document.getElementById("eventTimeCorrect").append(dateConverted); 
+
+
+    var currentDate = new Date()
+    var JSONCurrentDate = currentDate.toJSON()
+
+    console.log("json current date: " + JSONCurrentDate);
+    console.log("current date normal: " + currentDate);
+
+    if (eventDate > JSONCurrentDate)
+    {
+      console.log("event date is after current date")
+      // HIDE RATING
+      $('#rating_rating').css('display', 'none');
+      $('#rating_form').css('display', 'none');
+      $('#rating_notifytext').css('display','none');
+
+    }
+
+    if (eventDate < JSONCurrentDate)
+    {
+      console.log("event date is before current date")
+
+    }
+
+    
 }
 
 function getCurrentDate()
 {
-	var currentDate = new Date()
-	var day = currentDate.getDate()
-	var month = currentDate.getMonth() + 1
-	var year = currentDate.getFullYear()
-	console.log("<b>" + day + "/" + month + "/" + year + "</b>")
+
 }
 
 
