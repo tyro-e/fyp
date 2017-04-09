@@ -78,6 +78,7 @@ grails.project.dependency.resolution =
         compile ":ajax-uploader:1.1"
         compile ":aws-sdk:1.4.7"
         compile ":quartz:1.0-RC2"
+        compile "commons-io:commons-io:1.4"
 
         
 

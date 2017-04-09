@@ -15,6 +15,8 @@ class Event implements Rateable, Commentable  {
     String eventTime
     String livestream
 
+    static hasMany = [content:Content]
+
     static constraints = {
         bandsintown_id unique:true
         livestream nullable:true

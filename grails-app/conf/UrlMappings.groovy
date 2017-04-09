@@ -21,6 +21,11 @@ class UrlMappings {
         "/login/$action?"(controller: "login")
 		"/logout/$action?"(controller: "logout")
 
+        "/event/$id/upload"(controller: "event", parseRequest: true) 
+        {
+           action = [POST: "uploadImageToAmazon"]
+        }
+
 
 	}
 }

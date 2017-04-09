@@ -1,4 +1,3 @@
-<!--
 <%@ page import="fyp.Event" %>
 <div ng-if="details.Response!=='False' && details != 'empty'">
   <div ng-if="details.length == 0">No shows for {{ search }}</div>
@@ -9,7 +8,7 @@
  
     <li ng-repeat="show in details">
 
-        <g:link action="show" controller = "Event" id="${Event.findByTicketUrl( show.ticket_url )?.id}">Info</g:link>
+    <a ng-href="${createLink( controller: 'event', action: 'showByBandId' )}/{{show.id}}">Info</a>
       
         <div class = "event-date-time">{{ show.datetime }}</div>
 

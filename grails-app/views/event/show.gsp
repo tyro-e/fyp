@@ -40,6 +40,22 @@
 						</span>		
 					</g:if>
 				</div>
+		
+
+				<g:if test="${eventInstance?.content}">
+					<li class="fieldcontain">
+						<span id="content-label" class="property-label">
+							<g:message code="event.content.label" default="Content" /></span>
+						
+							<g:each in="${eventInstance.content}" var="c">
+								<span class="property-value" aria-labelledby="content-label">
+									<g:link controller="content" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link>
+								</span>
+							</g:each>
+					</li>
+				</g:if>
+
+
 			</div>
 
 			<!-- LIVESTREAM -->

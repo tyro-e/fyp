@@ -12,7 +12,10 @@ import grails.transaction.Transactional
 
 class EventController extends RestfulController
 {
-    //static responseFormats = ['json', 'xml']
+    static scaffold = true
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
+    def imageService
 
     EventController() {
         super(Event)
@@ -59,8 +62,43 @@ class EventController extends RestfulController
         render "${numberEvents} events loaded"
     }
 
-    static scaffold = true
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    def uploadImageToAmazon() 
+    {
+        def title = request?.JSON?.title
+        def type = request?.JSON?.type
+        byte[] byteArray = request?.JSON?.bytes
+        Event event = Event.findById(params?.id)
+        def absoluteUrl = imageService.uploadImageToAmazon(title, byteArray, type)
+
+        if (!event.avatar){
+            Content content = new Content()
+            content.absoluteUrl = absoluteUrl
+            content.type = type
+            content.name = title
+            content.save()
+            event?.avatar = content
+            event?.save()
+        } 
+
+        else {
+            event?.avatar?.absoluteUrl = absoluteUrl
+            event?.avatar?.type = type
+            event?.avatar?.name = title
+            event?.avatar?.save()
+            event.save()
+        }
+
+        render (["type": type, "title": title, "absoluteUrl": absoluteUrl] as JSON)
+    }
+
+
+    def showByBandId() 
+    {
+        def event = Event.findByBandsintown_id( params.id )
+         // add some error handling here in case event isn't found
+        redirect ( action: 'show', id: event.id )
+    }
+
 
     /*
     def index(Integer max) 

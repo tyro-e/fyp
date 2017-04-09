@@ -81,18 +81,21 @@ grails {
 grails {
     plugin {
         awssdk {
-            
-
-            s3 {
-                accessKey = {'AKIAJSQ7T7FL4RZKWPFQ'}    // Default access key
-                secretKey = {'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'}    // Default secret key
-                region = 'eu-west-1'        // Default region
+    
+                accessKey = {'AKIAJXSQVKBHPGSOP7HQ'}
+                secretKey = {'jC7rsqBMTdHtMB8UFvSy6PVUly5Kd/gHBB'}
+                region = 'eu-west-1'
                 domain = "s3.amazonaws.com"
                 bucketName = "fyp-subsurface"
-            }
+            
         }
     }
 }
+
+grails.plugin.awssdk.accessKey = {'AKIAJXSQVKBHPGSOP7HQ'}
+grails.plugin.awssdk.secretKey = {'jC7rsqBMTdHtMB8UFvSy6PVUly5Kd/gHBB'}
+grails.plugin.awssdk.region = "us-west-1"
+grails.plugin.awssdk.s3.bucket = "fyp-subsurface"
  
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
