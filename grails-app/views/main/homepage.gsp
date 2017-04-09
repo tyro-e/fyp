@@ -17,7 +17,6 @@
   <!-- ANGULAR JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script> 
-  <script src="${resource(dir:'js', file:'filter.js')}" type="text/javascript"></script>
 
 </head>
 
@@ -57,8 +56,6 @@
             <img id="scroll-to-arrow" src="https://www.viddyad.com/wp-content/uploads/2016/10/down-arrow.png" style="width: 50px;">
           </a>
         </div>
-
-        <button style="position: absolute;" onclick="filter()">FILTER</button>
         
         <!-- REGISTER IF NOT LOGGED IN -->
         <sec:ifNotLoggedIn>
@@ -147,7 +144,6 @@
 <script src="${resource(dir:'js/plugins', file:'fullcalendar.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js', file:'homepage.js')}" type="text/javascript"></script>
 <script src="${resource(dir:'js', file:'app.js')}" type="text/javascript"></script>
-<script src="${resource(dir:'js', file:'filter.js')}" type="text/javascript"></script>
 
 <!-- GOOGLE MAPS API -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
