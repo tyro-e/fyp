@@ -5,6 +5,8 @@ import fyp.UserRole
 
 class BootStrap {
 
+    //def EventController
+
     def init = { servletContext ->
 
         def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
@@ -16,6 +18,7 @@ class BootStrap {
 
         def user = new User(username: "user", password: "user", enabled: true).save(flush: true)
         UserRole.create(user, userRole).save()
+
     }
 
     def destroy = {

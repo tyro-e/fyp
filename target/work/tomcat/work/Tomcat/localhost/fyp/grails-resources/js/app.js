@@ -674,25 +674,3 @@ app.controller('BandsInTownController', function($scope, $http){
     this.setSelectionRange(0, this.value.length);
   }
 });
-
-app.filter('unique', function() 
-  {
-    console.log("RUNNING LAST?")
-
-    return function($scope, keyname) 
-      {
-        var output = [], keys = [];
-
-          angular.forEach($scope, function(item)
-          {
-            var key = item[keyname];
-            if(keys.indexOf(key) === -1) 
-            {
-                keys.push(key);
-                output.push(item);
-              }
-          });
-
-        return output;
-      };
-  });

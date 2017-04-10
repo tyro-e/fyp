@@ -14,6 +14,8 @@ class Event implements Rateable, Commentable  {
 	String ticketStatus
     String eventTime
     String livestream
+    String longitude
+    String latitude
 
     static hasMany = [content:Content]
 

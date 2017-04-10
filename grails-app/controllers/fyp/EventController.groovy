@@ -45,7 +45,9 @@ class EventController extends RestfulController
                                     venue: it.venue.name.toString(),
                                     ticketUrl: it.ticket_url.toString(),
                                     ticketStatus: it.ticket_status.toString(),
-                                    eventTime: it.datetime.toString())
+                                    eventTime: it.datetime.toString(),
+                                    latitude: it.venue.latitude.toString(),
+                                    longitude: it.venue.longitude.toString())
 
                                     
             if (!event.save()) {
