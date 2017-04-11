@@ -8,6 +8,12 @@
   <resources>
     <resource>DefaultWebXmlConfig</resource>
   </resources>
+     <listener>
+  <listener-class>
+    org.springframework.web.context.request.RequestContextListener
+  </listener-class>
+   </listener>
+
   <dependencies />
   <behavior />
 </plugin>
