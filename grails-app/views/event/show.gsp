@@ -23,13 +23,12 @@
 				<!-- VENUE -->
 				<div>
 					<g:if test="${eventInstance?.venue}">
-						<span class="property-value venue-name" aria-labelledby="venue-label">
+						<span class="property-value venue-name" id = "venueName" aria-labelledby="venue-label">
 							LIVE<div style="display:inline-block;color: red">AT</div><g:fieldValue bean="${eventInstance}" field="venue"/>
 						</span>
 					</g:if>
 				</div>
 			
-
 				<!-- DATE TIME -->
 				<div>
 					<div class = "eventTime" id="eventTimeCorrect"></div>
@@ -40,25 +39,9 @@
 						</span>		
 					</g:if>
 				</div>
-		
-
-				<g:if test="${eventInstance?.content}">
-					<li class="fieldcontain">
-						<span id="content-label" class="property-label">
-							<g:message code="event.content.label" default="Content" /></span>
-						
-							<g:each in="${eventInstance.content}" var="c">
-								<span class="property-value" aria-labelledby="content-label">
-									<g:link controller="content" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link>
-								</span>
-							</g:each>
-					</li>
-				</g:if>
-
-
 			</div>
 
-			<!-- LIVESTREAM -->
+			<!-- LIVESTREAM WINDOW -->
 			<div class="livestream-section">
 
 			    <!-- stream window -->
@@ -92,8 +75,30 @@
 
 			<!-- COMMENTING -->
 			<comments:render bean="${eventInstance}" />
+
+			<div class="latitudeAndLongitude">
+				<div>
+					<g:if test="${eventInstance?.latitude}">
+						<span class="property-value latitude" id = "latitude" aria-labelledby="latitude-label">
+							<g:fieldValue bean="${eventInstance}" field="latitude"/>
+						</span>
+					</g:if>
+				</div>
+
+				<div>
+					<g:if test="${eventInstance?.longitude}">
+						<span class="property-value longitude" id = "longitude" aria-labelledby="longitude-label">
+							<g:fieldValue bean="${eventInstance}" field="longitude"/>
+						</span>
+					</g:if>
+				</div>
+			</div>
+
+			<div id="map"></div>	
+
 		</div>
 
+		<!-- LIVESTREAM BUTTON -->
 		<div class="col-md-1">
 			<div class="livestream-button">
 			  	<g:form name = "Start" url="[resource:eventInstance, action:'update']" method="PUT" >
@@ -127,20 +132,23 @@
 		</div>
 
 		<!--
-			<g:form url="[resource:eventInstance, action:'delete']" method="DELETE">
-				<fieldset class="buttons">
-					<g:link class="edit" action="edit" resource="${eventInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>
+		<g:form url="[resource:eventInstance, action:'delete']" method="DELETE">
+			<fieldset class="buttons">
+				<g:link class="edit" action="edit" resource="${eventInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+				<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+			</fieldset>
+		</g:form>
 		-->
 		
 
-	<div id="map"></div>	
+	
 	
 	<!-- JAVASCRIPTS -->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="${resource(dir:'js', file:'spotify.js')}" type="text/javascript"></script>
     <script src="${resource(dir:'js', file:'event.js')}" type="text/javascript"></script>
+
+    <!-- GOOGLE MAPS API -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPPFxf8JyiTirmJeZvOWSW4z6NePOuEaU"></script>
   </body>
 </html>

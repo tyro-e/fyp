@@ -601,6 +601,8 @@ app.controller('BandsInTownController', function($scope, $http){
       var infowindow = new google.maps.InfoWindow({
         content: contentString
       });
+
+      
       
       // setting the attibutes for the map marker
       var marker = new google.maps.Marker({
