@@ -103,6 +103,9 @@ textarea {
     padding: 20px 0px;
 }
 
+.livestream-button{
+    display: none;
+}
 
 #open-room{
 	color: white;

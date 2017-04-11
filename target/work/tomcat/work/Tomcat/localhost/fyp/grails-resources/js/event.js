@@ -1,6 +1,6 @@
 $(document).ready(function() 
 {
-  changeDate();
+  eventDate();
   buildMap();
 });
 
@@ -8,9 +8,6 @@ $(document).ready(function()
 {
     var ticketStatus = $('#ticketStatus').html();
     var length = ticketStatus.length;
-
-    console.log(ticketStatus);
-    console.log(length)
 
     if (length <= 30){
     	$('#ticketStatus').addClass('ticketsAvail');
@@ -31,35 +28,45 @@ $(document).ready(function()
     $(".commentable").insertAfter(".addComment");
 });
 
-function changeDate(){
-    var eventDate = document.getElementById('eventTime').innerText;
-    console.log("event date json: " + eventDate);
-    var newDate = new Date(eventDate);
-    var dateConverted = newDate.toDateString();
-    eventDate = dateConverted;
-    console.log("event date normal: " + dateConverted);
-    document.getElementById("eventTimeCorrect").append(dateConverted); 
+
+function eventDate(){
+    var eventDateJSON = document.getElementById('eventTime').innerText;
+    console.log("event date json: " + eventDateJSON);
+
+    var newDate = new Date(eventDateJSON);
+    var eventDateNormal = newDate.toDateString();
+    console.log("event date normal: " + eventDateNormal);
+    document.getElementById("eventTimeCorrect").append(eventDateNormal); 
 
 
-    var currentDate = new Date()
-    var JSONCurrentDate = currentDate.toJSON()
+    var currentDate = new Date();
+    var currentDateJSON = currentDate.toJSON();
 
-    console.log("current date json: " + JSONCurrentDate);
+    console.log("current date json: " + currentDateJSON);
     console.log("current date normal: " + currentDate);
 
-    if (eventDate > JSONCurrentDate)
+
+
+    if (eventDateJSON > currentDateJSON)
     {
-      console.log("event date is after current date")
-      // HIDE RATING
+      console.log("event happens after today")
+
       $('#rating_rating').css('display', 'none');
       $('#rating_form').css('display', 'none');
       $('#rating_notifytext').css('display','none');
+      $('.livestream-button').css('display','none');
     }
 
-    if (eventDate < JSONCurrentDate)
+    if (eventDateJSON < currentDateJSON)
     {
-      console.log("event date is before current date")
+      console.log("event has happened")
+      $('.livestream-button').css('display','none');
+    }
 
+    if (eventDateJSON = currentDateJSON)
+    {
+      console.log("event is today")
+      $('.livestream-button').css('display','block');
     }
 }
 
