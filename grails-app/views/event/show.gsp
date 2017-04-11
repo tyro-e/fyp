@@ -51,17 +51,17 @@
 			</div>
 
 			<!-- TICKET STATUS -->
-			<div>
+			<div class="ticketStatusDiv">
 				<g:if test="${eventInstance?.ticketStatus}">
 					<span class="property-value" id = "ticketStatus" aria-labelledby="ticketStatus-label">
-						<g:fieldValue bean="${eventInstance}" field="ticketStatus"/>
+						TICKETS <g:fieldValue bean="${eventInstance}" field="ticketStatus"/>
 					</span>
 				</g:if>
 			</div>
 		
 			<!-- TICKET URL -->
-			<div>
-				<a class = "ticketLink btn" id="ticket_url_append">BUY TICKETS</a>
+			<div class="ticketLinkDiv">
+				<a class = "ticketLink btn" id="ticket_url_append" target="_blank">BUY TICKETS</a>
 
 				<g:if test="${eventInstance?.ticketUrl}">					
 					<span class="property-value ticketUrl" aria-labelledby="ticketUrl-label" style="opacity: 0;font-size: 0;">
@@ -76,6 +76,7 @@
 			<!-- COMMENTING -->
 			<comments:render bean="${eventInstance}" />
 
+			<!-- LATITUDE & LONGITUDE -->
 			<div class="latitudeAndLongitude">
 				<div>
 					<g:if test="${eventInstance?.latitude}">
@@ -139,9 +140,6 @@
 			</fieldset>
 		</g:form>
 		-->
-		
-
-	
 	
 	<!-- JAVASCRIPTS -->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>

@@ -9,11 +9,16 @@ $(document).ready(function()
     var ticketStatus = $('#ticketStatus').html();
     var length = ticketStatus.length;
 
-    if (length < 24){
+    console.log(ticketStatus);
+    console.log(length)
+
+    if (length <= 30){
     	$('#ticketStatus').addClass('ticketsAvail');
+      $('.ticketStatusDiv').css('display','none');
     }
     else{
     	$('#ticketStatus').addClass('ticketsUnavail');
+      $('.ticketLinkDiv').css('display','none');
     }
 });
 
@@ -65,18 +70,14 @@ function changeDate(){
     var venue = document.getElementById('venueName').innerText;
     var myLatLng = {lat: latitude, lng: longitude};
     var map;
-
-    console.log(longitude);
-    console.log(latitude);
-    console.log(venue);
       
     // centering & zoom level of map
     map = new google.maps.Map(document.getElementById('map'), 
     {     
       center: myLatLng,
       zoom: 15,
-      scrollwheel: false
-      //disableDefaultUI: true
+      scrollwheel: false,
+      disableDefaultUI: true
     });  
     
     var marker = new google.maps.Marker({
