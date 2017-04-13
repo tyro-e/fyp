@@ -101,10 +101,8 @@
 
 		<!-- LIVESTREAM BUTTON -->
 		<div class="col-md-1">
-			<!--
 			<sec:ifLoggedIn>
 	    		<sec:ifAllGranted roles="ROLE_ADMIN">
-	    	-->
 					<div class="livestream-button">
 					  	<g:form name = "Start" url="[resource:eventInstance, action:'update']" method="PUT" >
 			  				<div name="livestream" type="text" id="room-id" value="${eventInstance?.livestream}"></div>
@@ -117,10 +115,8 @@
 				    	<button style = "visibility: hidden;" id="join-room">Join</button>
 				    	<button style = "visibility: hidden;" id="open-or-join-room">Auto Start or Join</button>
 				    </div>
-		    <!--
 				</sec:ifAllGranted>
 			</sec:ifLoggedIn>
-			-->
 
 		    <div class="attend-button">
 
