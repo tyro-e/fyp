@@ -64,29 +64,15 @@ grails {
     }
 }
 
-/*
-grails {
-    resources {        
-        s3 {
-            accessKey = "AKIAJ5OATHW54K7V3KVA"
-            secretKey = "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"
-            domain = "s3.amazonaws.com"
-            bucketName = "fyp-subsurface"
-            region = 'eu-west-1'
-        }
-    }
-}
-*/
+
 
 grails {
     plugin {
         awssdk {
-    
-                accessKey = {'AKIAJXSQVKBHPGSOP7HQ'}
-                secretKey = {'jC7rsqBMTdHtMB8UFvSy6PVUly5Kd/gHBB'}
+            s3{
                 region = 'eu-west-1'
-                domain = "s3.amazonaws.com"
-                bucketName = "fyp-subsurface"
+                bucket = "fyp-subsurface"
+            }
             
         }
     }
