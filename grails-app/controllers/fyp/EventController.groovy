@@ -13,9 +13,11 @@ import grails.transaction.Transactional
 class EventController extends RestfulController
 {
     static scaffold = true
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", uploadFeaturedImage: "POST", delete: "DELETE"]
 
-    def imageService
+    def uploadHotelFeaturedImageService
+
+    def hotelGormService
 
     EventController() {
         super(Event)
@@ -64,33 +66,31 @@ class EventController extends RestfulController
         render "${numberEvents} events loaded"
     }
 
-    def uploadImageToAmazon() 
-    {
-        def title = request?.JSON?.title
-        def type = request?.JSON?.type
-        byte[] byteArray = request?.JSON?.bytes
-        Event event = Event.findById(params?.id)
-        def absoluteUrl = imageService.uploadImageToAmazon(title, byteArray, type)
+    def uploadFeaturedImage(FeaturedImageCommand cmd) {
 
-        if (!event.avatar){
-            Content content = new Content()
-            content.absoluteUrl = absoluteUrl
-            content.type = type
-            content.name = title
-            content.save()
-            event?.avatar = content
-            event?.save()
-        } 
-
-        else {
-            event?.avatar?.absoluteUrl = absoluteUrl
-            event?.avatar?.type = type
-            event?.avatar?.name = title
-            event?.avatar?.save()
-            event.save()
+        if (cmd.hasErrors()) {
+            respond(cmd.errors, model: [event: cmd], view: 'editFeaturedImage')
+            return
         }
 
-        render (["type": type, "title": title, "absoluteUrl": absoluteUrl] as JSON)
+        def event = uploadHotelFeaturedImageService.uploadFeatureImage(cmd)
+        if (event == null) {
+            notFound()
+            return
+        }
+
+        if (event.hasErrors()) {
+            respond(event.errors, model: [event: event], view: 'editFeaturedImage')
+            return
+        }
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'event.label', default: 'Event'), event.id])
+                redirect event
+            }
+            '*'{ respond event, [status: OK] }
+        }
     }
 
 

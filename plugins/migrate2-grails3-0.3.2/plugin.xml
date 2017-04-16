@@ -1,9 +1,0 @@
-<plugin name='migrate2-grails3' version='0.3.2' grailsVersion='2.0 &gt; *'>
-  <author>Donal Murtagh</author>
-  <authorEmail>domurtag@yahoo.co.uk</authorEmail>
-  <title>Migrate2 Grails3 Plugin</title>
-  <description>Performs a partial migration of a Grails 2 plugin or app to Grails 3</description>
-  <documentation>https://github.com/domurtag/migrate-2-grails3/blob/master/README.md</documentation>
-  <type>Migrate2Grails3GrailsPlugin</type>
-  <resources />
-</plugin>

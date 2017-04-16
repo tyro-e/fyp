@@ -73,7 +73,6 @@ grails {
                 region = 'eu-west-1'
                 bucket = "fyp-subsurface"
             }
-            
         }
     }
 }

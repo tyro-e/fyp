@@ -2,15 +2,11 @@ package fyp
 
 class Content 
 {
-    String name
-    String type
-    String absoluteUrl
-
-    static belongsTo = [event: Event]
+    Event event
+    String featuredImageUrl
 
     static constraints = {
-        name nullable: true
-        type nullable: true
-        absoluteUrl nullable: true
+
+        featuredImageUrl nullable: true
     }
 }

@@ -654,3 +654,1137 @@ groovy.lang.MissingMethodException: No signature of method: grails.util.Environm
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 14:26:45,658 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	... 23 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	... 38 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 14:26:45,676 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	... 38 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 14:26:45,678 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 14:26:45,679 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 14:26:45,681 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:26:45,681 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:26:45,682 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:26:45,682 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:26:45,683 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 14:26:45,683 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:26:45,683 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:26:45,684 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:26:45,684 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:26:45,684 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 14:26:45,684 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,433 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	... 23 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	... 38 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 14:44:50,437 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	... 38 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 14:44:50,439 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 14:44:50,441 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 14:44:50,444 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,444 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,445 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,445 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,446 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 14:44:50,446 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,447 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,447 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,448 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 14:44:50,448 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 14:44:50,449 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,062 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	... 23 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	... 38 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 18:05:38,070 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:329)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	... 38 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 18:05:38,079 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 46 more
+2017-04-13 18:05:38,082 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:306)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:290)
+	at org.hibernate.mapping.Property.isValid(Property.java:243)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:464)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:235)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1362)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1865)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsAnnotationConfiguration.buildSessionFactory(GrailsAnnotationConfiguration.java:135)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.newSessionFactory(ConfigurableLocalSessionFactoryBean.java:186)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean.afterPropertiesSet(ConfigurableLocalSessionFactoryBean.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:323)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:107)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.initialize(TransactionManagerPostProcessor.java:74)
+	at org.codehaus.groovy.grails.orm.support.TransactionManagerPostProcessor.setBeanFactory(TransactionManagerPostProcessor.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1532)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.codehaus.groovy.grails.commons.spring.ReloadAwareAutowireCapableBeanFactory.doCreateBean(ReloadAwareAutowireCapableBeanFactory.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:720)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.codehaus.groovy.grails.commons.spring.DefaultRuntimeSpringConfiguration.getApplicationContext(DefaultRuntimeSpringConfiguration.java:153)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:169)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:122)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 18:05:38,084 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,085 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,085 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,085 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,086 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 18:05:38,086 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,087 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,088 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,089 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+2017-04-13 18:05:38,089 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-13 18:05:38,090 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
+Caused by: org.hibernate.MappingException: Could not determine type for: org.springframework.web.multipart.MultipartFile, at table: featured_image_command, for columns: [org.hibernate.mapping.Column(featured_image_file)]
+	... 4 more
